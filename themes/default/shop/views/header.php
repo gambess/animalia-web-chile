@@ -33,10 +33,6 @@
         <!--[if IE]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
           <![endif]-->
-
-
-
-
         <section class="header_area">
             <div class="header_navbar">
                 <div class="container">
@@ -77,46 +73,5 @@
                         </div>
                     </div> 
                 </div> 
-            </div> 
-            <div id="home" class="header_slider slider-active">
-                <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(<?= $assets; ?>images/slider-1.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="slider_content">
-                                    <h2 class="slider_title">Experience Authentic Coffees</h2>
-                                    <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
-                                    <a href="#about" class="main-btn">Learn More</a>
-                                </div> 
-                            </div>
-                        </div> 
-                    </div> 
-                </div> 
-                <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(<?= $assets; ?>images/slider-2.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="slider_content">
-                                    <h2 class="slider_title">Check Out Our Signature Menu</h2>
-                                    <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
-                                    <a href="#menu" class="main-btn">View Menu</a>
-                                </div> 
-                            </div>
-                        </div> 
-                    </div> 
-                </div> 
-                <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(<?= $assets; ?>images/slider-3.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="slider_content">
-                                    <h2 class="slider_title wow fadeInUp">Serving Since 1980</h2>
-                                    <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, </p>
-                                    <a href="#contact" class="main-btn">Contact Us</a>
-                                </div> 
-                            </div>
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
+            </div>  
         </section>
