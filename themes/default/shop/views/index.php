@@ -93,12 +93,12 @@
             <div class="col-lg-6">
                 <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                     <h4 class="about_title">Animalia</h4>
-                    <p>Animalia, Soluciones Veterinarias Integrales consetetur sadipscing elitr, sed diam aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. <br> <br> Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <p>Animalia, Soluciones Veterinarias Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web. <br> <br> Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web.</p>
                     <ul class="social">
-                        <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                        <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                        <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-                        <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                        <li><a href="https://www.facebook.com/Animalia-110563507299462"><i class="lni lni-facebook-filled"></i></a></li>
+                        <!--<li><a href="#"><i class="lni lni-twitter-original"></i></a></li>-->
+                        <li><a href="https://www.instagram.com/animalia_arica/"><i class="lni lni-instagram-original"></i></a></li>
+                        <!--<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>-->
                     </ul>
                 </div> 
             </div>
@@ -466,28 +466,28 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="single_form mt-30">
-                            <input name="name" type="text" placeholder="Name">
+                            <input name="name" type="text" placeholder="Nombre">
                         </div> 
                     </div>
                     <div class="col-lg-6">
                         <div class="single_form mt-30">
-                            <input name="email" type="email" placeholder="Email">
+                            <input name="subject" type="email" placeholder="Celular">
                         </div> 
                     </div>
                     <div class="col-lg-12">
                         <div class="single_form mt-30">
-                            <input name="subject" type="text" placeholder="Subject">
+                            <input name="email" type="text" placeholder="Email">
                         </div> 
                     </div>
                     <div class="col-lg-12">
                         <div class="single_form mt-30">
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <textarea name="message" placeholder="Mensaje"></textarea>
                         </div> 
                     </div>
                     <p class="form-message"></p>
                     <div class="col-lg-12">
                         <div class="single_form text-center mt-30">
-                            <button class="main-btn">SUBMIT</button>
+                            <button class="main-btn">Envíar</button>
                         </div> 
                     </div>
                 </div> 
@@ -496,7 +496,8 @@
     </div> 
     <div class="contact_map">
         <div class="gmap_canvas">
-            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15136.064401262563!2d-70.2942353!3d-18.4829299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8955300ed69c6434!2sArica%20guau!5e0!3m2!1ses!2scl!4v1602863444808!5m2!1ses!2scl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <!--<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>-->
         </div>
     </div> 
 </section>

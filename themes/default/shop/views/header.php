@@ -59,7 +59,7 @@
                                             <a class="page-scroll" href="#gallery">Destacados</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a>
+                                            <a href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a>
                                         </li>
                                         <li class="dropdown nav-item">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= lang('categories'); ?></a>
@@ -86,7 +86,7 @@
                                             <a class="page-scroll" href="#contact">Contáctanos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#menu">Menu</a>
+                                            <a href="#menu">Iniciar Sesión</a>
                                         </li>
                                         
                                     </ul>
