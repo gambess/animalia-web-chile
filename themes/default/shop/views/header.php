@@ -50,23 +50,45 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul id="nav" class="navbar-nav ml-auto">
                                         <li class="nav-item active">
-                                            <a class="page-scroll" href="#home">Home</a>
+                                            <a class="page-scroll" href="#home">Inicio</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#about">About</a>
+                                            <a class="page-scroll" href="#about">Compromiso</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#gallery">Gallery</a>
+                                            <a class="page-scroll" href="#gallery">Destacados</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a>
+                                        </li>
+                                        <li class="dropdown nav-item">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= lang('categories'); ?></a>
+                                            <ul class="dropdown-menu">
+                                                <?php
+                                                foreach ($categories as $pc) {
+                                                    echo '<li class="nav-item">';
+                                                    echo '<a ' . ($pc->subcategories ? 'class="dropdown-toggle" data-toggle="dropdown"' : '') . ' href="' . site_url('category/' . $pc->slug) . '">' . $pc->name . '</a>';
+                                                    if ($pc->subcategories) {
+                                                        echo '<ul class="dropdown-menu">';
+                                                        foreach ($pc->subcategories as $sc) {
+                                                            echo '<li><a href="' . site_url('category/' . $pc->slug . '/' . $sc->slug) . '">' . $sc->name . '</a></li>';
+                                                        }
+                                                        echo '<li class="divider"></li>';
+                                                        echo '<li><a href="' . site_url('category/' . $pc->slug) . '">' . lang('all_products') . '</a></li>';
+                                                        echo '</ul>';
+                                                    }
+                                                    echo '</li>';
+                                                }
+                                                ?>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="#contact">Contáctanos</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="page-scroll" href="#menu">Menu</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="page-scroll" href="#upcoming">Updates</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="page-scroll" href="#contact">Contact</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div> 
                             </nav> 

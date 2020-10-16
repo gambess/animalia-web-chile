@@ -109,11 +109,14 @@
 <section id="gallery" class="gallery_area pt-95">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-9">
-                <div class="section_title text-center pb-55">
+            <div class="col-lg-6">
+                <div class="section_title text-center pb-10">
                     <h4 class="title">Productos Destacados</h4>
                     <p>Revise las ofertas y novedades que tenemos para tí.</p>
-                </div>
+                    <span class="line">
+                        <span class="box"></span>
+                    </span>
+                </div> 
             </div>
         </div> 
     </div> 
@@ -346,19 +349,19 @@
             <div class="col-md-4 col-sm-12">
                 <div class="single_counter mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
                     <span class="count"><span class="counter">36546</span></span>
-                    <p>Coffee Served</p>
+                    <p>Productos Despachados</p>
                 </div> 
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="single_counter mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <span class="count"><span class="counter">28</span></span>
-                    <p>Type of Coffees</p>
+                    <span class="count"><span class="counter">1600</span></span>
+                    <p>Tipos de Productos</p>
                 </div> 
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="single_counter mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                    <span class="count"><span class="counter">12</span></span>
-                    <p>Team Members</p>
+                    <span class="count"><span class="counter">1650</span></span>
+                    <p>Clientes</p>
                 </div> 
             </div>
         </div> 
@@ -371,7 +374,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Customers Feedback</h4>
+                    <h4 class="title">Comentarios de Clientes</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
