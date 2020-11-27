@@ -1,17 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-<?php if (DEMO && ($m == 'main' && $v == 'index')) { ?>
-<div class="page-contents padding-top-no">
-    <div class="container">
-        <div class="alert alert-info margin-bottom-no">
-            <p>
-                <strong>Shop module is not complete item but add-on to Stock Manager Advance and is available separately.</strong><br>
-                This is joint demo for main item (Stock Manager Advance) and add-ons (POS & Shop Module). Please check the item page on codecanyon.net for more info about what's not included in the item and you must read the page there before purchase. Thank you
-            </p>
-        </div>
-    </div>
-</div>
-<?php } ?>
-
 <section class="footer">
     <div class="container padding-bottom-md">
         <div class="row">
@@ -169,8 +156,9 @@ $(document).ready(function ($) {
 });
 </script>
 <?php } ?>
-<script type="text/javascript">
+
 <?php if ($message || $warning || $error || $reminder) { ?>
+<script type="text/javascript">
 $(document).ready(function() {
     <?php if ($message) { ?>
         sa_alert('<?=lang('success');?>', '<?= trim(str_replace(array("\r","\n","\r\n"), '', addslashes($message))); ?>');
@@ -182,7 +170,7 @@ $(document).ready(function() {
         sa_alert('<?=lang('reminder');?>', '<?= trim(str_replace(array("\r","\n","\r\n"), '', addslashes($reminder))); ?>', 'info');
     <?php } ?>
 });
-<?php } ?>
 </script>
+<?php } ?>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<!-- BEGIN HEADER.php -->
 <?php if(!empty($slider)) { ?>
 <section class="slider-container">
     <div class="container-fluid">

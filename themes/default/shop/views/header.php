@@ -17,7 +17,7 @@
     <meta property="og:image" content="<?= isset($product) && !empty($product) ? base_url('assets/uploads/'.$product->image) : base_url('assets/uploads/logos/'.$shop_settings->logo); ?>" />
 </head>
 <body>
-    <section id="wrapper" class="blue">
+    <!--<section id="wrapper" class="blue">-->
         <header>
             <!-- Top Header -->
             <section class="top-header">
@@ -296,15 +296,5 @@
             </nav>
             <!-- End Nav Bar -->
         </header>
-        <?php if (DEMO && ($m != 'main' || $v != 'index')) { ?>
-        <div class="page-contents padding-bottom-no">
-            <div class="container">
-                <div class="alert alert-info margin-bottom-no">
-                    <p>
-                        <strong>Shop module is not complete item but add-on to Stock Manager Advance and is available separately.</strong><br>
-                        This is joint demo for main item (Stock Manager Advance) and add-ons (POS & Shop Module). Please check the item page on codecanyon.net for more info about what's not included in the item and you must read the page there before purchase. Thank you
-                    </p>
-                </div>
-            </div>
-        </div>
-        <?php } ?>
+
+<!-- End HEADER.php -->
