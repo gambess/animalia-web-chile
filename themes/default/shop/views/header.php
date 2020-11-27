@@ -40,12 +40,15 @@
                                     <?= lang('hi') . ' ' . $loggedInUser->first_name; ?> <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <?php if (!$shop_settings->hide_price) { ?>
-                                    <li class="hidden-xs"><a href="<?= shop_url('wishlist'); ?>"><i class="fa fa-heart"></i> <?= lang('wishlist'); ?> (<span id="total-wishlist"><?= $wishlist; ?></span>)</a></li>
-                                    <?php } ?>
+                                    <li class="divider"></li>
+                                        <?= $loggedIn && $Staff ? '<li class="hidden-xs"><a href="'.admin_url().'"><i class="fa fa-dashboard"></i> '.lang('admin_area').'</a></li>' : ''; ?>
+                                    <li class="divider"></li>
                                     <li class=""><a href="<?= site_url('profile'); ?>"><i class="mi fa fa-user"></i> <?= lang('profile'); ?></a></li>
                                     <li class=""><a href="<?= shop_url('orders'); ?>"><i class="mi fa fa-heart"></i> <?= lang('orders'); ?></a></li>
                                     <li class=""><a href="<?= shop_url('quotes'); ?>"><i class="mi fa fa-heart-o"></i> <?= lang('quotes'); ?></a></li>
+                                    <?php if (!$shop_settings->hide_price) { ?>
+                                    <li class="hidden-xs"><a href="<?= shop_url('wishlist'); ?>"><i class="fa fa-heart"></i> <?= lang('wishlist'); ?> (<span id="total-wishlist"><?= $wishlist; ?></span>)</a></li>
+                                    <?php } ?>
                                     <li class=""><a href="<?= shop_url('downloads'); ?>"><i class="mi fa fa-download"></i> <?= lang('downloads'); ?></a></li>
                                     <li class=""><a href="<?= shop_url('addresses'); ?>"><i class="mi fa fa-building"></i> <?= lang('addresses'); ?></a></li>
                                     <li class="divider"></li>
@@ -68,7 +71,6 @@
                             <?php
                         }
                         ?>
-                        <li class="<?= $m == 'main' && $v == 'index' ? 'active' : ''; ?>"><a href="#home"><?= lang('home'); ?></a></li>
                         <li class="dropdown-divider"></li>
                         <?php if ($isPromo) { ?>
                             <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') == 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products?promo=yes'); ?>"><?= lang('promotions'); ?></a>
@@ -76,6 +78,7 @@
                         <?php } ?>
                         <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') != 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a>
                         </li>
+                        <li class="divider"></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <?= lang('categories'); ?> <span class="caret"></span>
@@ -172,6 +175,7 @@
                             <li class="<?= $m == 'cart_ajax' && $v == 'checout' ? 'active' : ''; ?>"><a href="<?= site_url('cart/checkout'); ?>"><?= lang('checkout'); ?></a></li>
                         <?php } ?>
                         <li class="dropdown-divider"></li>
+                        <li class="nav-item"><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
                         <li class="nav-item"><a class="page-scroll" href="#about">Acerca</a></li>
                         <li class="nav-item"><a class="page-scroll" href="#gallery">Galeria</a></li>
                         <li class="nav-item"><a class="page-scroll" href="#menu">Veterinary</a></li>
