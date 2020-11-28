@@ -1,7 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!-- BEGIN HEADER.php -->
 <?php if (!empty($slider)) { ?>
-    <section class="header_area">
         <div id="home" class="header_slider slider-active">
             <?php
             $sr = 0;
@@ -9,19 +8,24 @@
                 if (!empty($slide->image)) {
                     echo '<div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(' . base_url('assets/uploads/' . $slide->image) . ')">';
                     if (!empty($slide->caption)) {
-                        echo '<div class="container"><div class="row"><div class="col-md-9"><div class="slider_content"><!--<h2 class="slider_title">Experience Authentic Coffees</h2>--><p class="wow fadeInUp">'
-                        . $slide->caption
-                        . '</p><!--<a href="#about" class="main-btn">Learn More</a>--></div></div></div></div>';
+                        echo '<div class="container">'
+                        . '<div class="row">'
+                                . '<div class="col-md-9">'
+                                . '<div class="slider_content">'
+                                . '<h2 class="slider_title">Experience Authentic Coffees</h2>'
+                                . '<p class="wow fadeInUp">'. $slide->caption . '</p>'
+                                . '<a href="#about" class="main-btn">Learn More</a>'
+                                ;
                     }
-                    echo '</div>';
+                    echo '</div></div></div></div></div>';
                 }
                 $sr++;
             }
             ?>
         </div>
-    </section>
+    
 <?php } ?>
-
+</section>
 <section id="coffee" class="coffee_area pt-120">
     <div class="container">
         <div class="row justify-content-center">
