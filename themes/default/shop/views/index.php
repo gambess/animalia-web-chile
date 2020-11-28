@@ -199,7 +199,7 @@
                         <span class="discount">-30%</span>
                     </div>
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-1.png" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-10.png" alt="gallery">
                     </div>
                     <div class="gallery_content">
                         <ul>
@@ -226,7 +226,7 @@
                         <span class="new">New</span>
                     </div>
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-2.png" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-20.png" alt="gallery">
                     </div>
                     <div class="gallery_content">
                         <ul>
@@ -253,7 +253,7 @@
                         <span class="discount">-30%</span>
                     </div>
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-3.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-30.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
                         <ul>
@@ -280,7 +280,7 @@
                         <span class="new">New</span>
                     </div>
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-4.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-40.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
                         <ul>
