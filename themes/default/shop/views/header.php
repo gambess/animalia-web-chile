@@ -190,12 +190,12 @@
                                             <li class="<?= $m == 'cart_ajax' && $v == 'index' ? 'active' : ''; ?>"><a href="<?= site_url('cart'); ?>"><?= lang('shopping_cart'); ?></a></li>
                                             <li class="<?= $m == 'cart_ajax' && $v == 'checout' ? 'active' : ''; ?>"><a href="<?= site_url('cart/checkout'); ?>"><?= lang('checkout'); ?></a></li>
                                         <?php } ?>
-<!--                                        <li class="dropdown-divider"></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#about">Acerca</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#gallery">Galeria</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#menu">Veterinary</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#contact">Contáctanos</a></li>-->
+                                        <li class="dropdown-divider"></li>
+                                        <li class=""><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
+                                        <li class=""><a class="page-scroll" href="#coffee">Ubicaciones</a></li>
+                                        <li class=""><a class="page-scroll" href="#about">Acerca</a></li>
+                                        <li class=""><a class="page-scroll" href="#gallery">Veterinary</a></li>
+                                        <li class=""><a class="page-scroll" href="#contact">Contáctanos</a></li>
                                         <li class="dropdown-divider"></li>
                                         <ul class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
                                             <?= shop_form_open('products', 'id="product-search-form"'); ?>

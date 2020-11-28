@@ -1,29 +1,32 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!-- BEGIN HEADER.php -->
 <?php if (!empty($slider)) { ?>
-        <div id="home" class="header_slider slider-active">
-            <?php
-            $sr = 0;
-            foreach ($slider as $slide) {
-                if (!empty($slide->image)) {
-                    echo '<div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(' . base_url('assets/uploads/' . $slide->image) . ')">';
-                    if (!empty($slide->caption)) {
-                        echo '<div class="container">'
-                        . '<div class="row">'
-                                . '<div class="col-md-9">'
-                                . '<div class="slider_content">'
-                                . '<h2 class="slider_title">Experience Authentic Coffees</h2>'
-                                . '<p class="wow fadeInUp">'. $slide->caption . '</p>'
-                                . '<a href="#about" class="main-btn">Learn More</a>'
-                                ;
-                    }
-                    echo '</div></div></div></div></div>';
+    <div id="home" class="header_slider slider-active">
+        <?php
+        $sr = 0;
+        foreach ($slider as $slide) {
+            if (!empty($slide->image)) {
+                echo '<div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(' . base_url('assets/uploads/' . $slide->image) . ')">';
+                if (!empty($slide->caption)) {
+                    echo '<div class="container">'
+                    . '<div class="row">'
+                    . '<div class="col-md-9">'
+                    . '<div class="slider_content">'
+                    . '<h2 class="slider_title">' . $slide->caption . '</h2>'
+                    . '<p class="wow fadeInUp">' . $slide->caption . '</p>'
+                    ;
                 }
-                $sr++;
+                if (!empty($slide->link)) {
+                    echo '<a href="' . $slide->link . '" class="main-btn">Enlace ' . $sr . ' </a>'
+                    ;
+                }
+                echo '</div></div></div></div></div>';
             }
-            ?>
-        </div>
-    
+            $sr++;
+        }
+        ?>
+    </div>
+
 <?php } ?>
 </section>
 <section id="coffee" class="coffee_area pt-120">
@@ -31,7 +34,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Nuestras Sucursales</h4>
+                    <h4 class="title">Ubicaciones</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -46,7 +49,7 @@
                     </div>
                     <div class="coffee_content">
                         <h4 class="coffee_title">Animalia Express</h4>
-                        <p>Ubicada en Av. Diego Portales 2202, abierto de 10hrs a 21hrs de Lunes a Domingo .</p>
+                        <p>Av. Diego Portales 2202, abierto de 10hrs a 21hrs de Lunes a Domingo .</p>
                     </div>
                 </div> 
             </div>
@@ -56,8 +59,8 @@
                         <img src="<?= $assets; ?>images/rural.jpg" alt="coffee">
                     </div>
                     <div class="coffee_content">
-                        <h4 class="coffee_title">Animalia Rural</h4>
-                        <p>Ubicada en Calle Sofia SN km 3 1/2, abierto de 10hrs a 21hrs de Lunes a Domingo .</p>
+                        <h4 class="coffee_title">Animalia Azapa</h4>
+                        <p>Calle Sofia SN km 3 1/2, abierto de 10hrs a 21hrs de Lunes a Domingo .</p>
                     </div>
                 </div> 
             </div>
@@ -68,7 +71,7 @@
                     </div>
                     <div class="coffee_content">
                         <h4 class="coffee_title">Animalia Web</h4>
-                        <p>Puedes comprar y agendar el despacho o recogida de tus productos 24 horas al día, los 7 dias de la semana durante todo el año .</p>
+                        <p>Abierto 24 horas al día, los 7 dias de la semana durante todo el año.</p>
                     </div>
                 </div> 
             </div>
@@ -82,7 +85,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-10">
-                    <h4 class="title">Nuestro Compromiso</h4>
+                    <h4 class="title">Animalia</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -97,8 +100,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <h4 class="about_title">Animalia</h4>
-                    <p>Animalia, Soluciones Veterinarias Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web. <br> <br> Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web.</p>
+                    <h4 class="about_title">Animalia, Soluciones Veterinarias Integrales</h4>
+                    <p>Animalia, Animalia Express, Animalia Azapa, Animalia Azapa, Animalia Express, Animalia Azapa, Animalia Web. <br> <br> Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web.</p>
                     <ul class="social">
                         <li><a href="https://www.facebook.com/Animalia-110563507299462"><i class="lni lni-facebook-filled"></i></a></li>
                         <!--<li><a href="#"><i class="lni lni-twitter-original"></i></a></li>-->
@@ -111,7 +114,70 @@
     </div> 
 </section>
 
-<section id="gallery" class="gallery_area pt-95">
+<section id="gallery" class="gallery_area pt-120 pb-130">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_title text-center pb-30">
+                    <h4 class="title">Coffee Gallery</h4>
+                    <span class="line">
+                        <span class="box"></span>
+                    </span>
+                </div> 
+            </div>
+        </div> 
+    </div> 
+    <div class="container">
+        <div class="row gallery_active">
+            <div class="col-md-6 col-sm-12">
+                <div class="single_gallery mt-30">
+                    <div class="gallery_image">
+                        <img src="<?= $assets; ?>images/gallery-1.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery_content">
+                        <h5 class="gallery_title">Coffee 1</h5>
+                        <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="single_gallery mt-30">
+                    <div class="gallery_image">
+                        <img src="<?= $assets; ?>images/gallery-2.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery_content">
+                        <h5 class="gallery_title">Coffee 2</h5>
+                        <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="single_gallery mt-30">
+                    <div class="gallery_image">
+                        <img src="<?= $assets; ?>images/gallery-3.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery_content">
+                        <h5 class="gallery_title">Coffee 3</h5>
+                        <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="single_gallery mt-30">
+                    <div class="gallery_image">
+                        <img src="<?= $assets; ?>images/gallery-4.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery_content">
+                        <h5 class="gallery_title">Coffee 4</h5>
+                        <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </div> 
+</section>
+
+<section id="gallery2" class="gallery_area pt-95">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -447,6 +513,45 @@
                                 <li><i class="lni lni-star-filled"></i></li>
                             </ul>
                         </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </div> 
+</section>
+
+<section id="upcoming" class="upcoming_area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_title text-center pb-30">
+                    <h4 class="title">Upcoming</h4>
+                    <span class="line">
+                        <span class="box"></span>
+                    </span>
+                </div> 
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="single_upcoming mt-30 d-sm-flex align-items-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                    <div class="upcoming_image">
+                        <img src="<?= $assets; ?>images/upcoming-1.jpg" alt="upcoming">
+                    </div>
+                    <div class="upcoming_content media-body">
+                        <h4 class="upcoming_title"><a href="#">Lorem ipsum dolor sit amdi scing elitr diam nonumy</a></h4>
+                        <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_upcoming mt-30 d-sm-flex align-items-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                    <div class="upcoming_image">
+                        <img src="<?= $assets; ?>images/upcoming-2.jpg" alt="upcoming">
+                    </div>
+                    <div class="upcoming_content media-body">
+                        <h4 class="upcoming_title"><a href="#">Lorem ipsum dolor sit amdi scing elitr diam nonumy</a></h4>
+                        <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat.</p>
                     </div>
                 </div> 
             </div>
