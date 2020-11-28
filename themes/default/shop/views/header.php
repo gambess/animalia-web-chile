@@ -199,21 +199,29 @@
                                         <li class=""><a class="page-scroll" href="#upcoming">Pr&oacute;ximamente</a></li>
                                         <li class=""><a class="page-scroll" href="#contact">Cont&aacute;ctanos</a></li>
                                         <li class="dropdown-divider"></li>
-                                        <ul class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
-                                            <?= shop_form_open('products', 'id="product-search-form"'); ?>
-                                            <div class="input-group">
-                                                <input name="query" type="text" class="form-control" id="product-search" aria-label="Buscar..." placeholder="Buscar Productos...">
-                                                <div class="input-group-btn">
-                                                    <button type="submit" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
-                                                </div>
-                                            </div>
-                                            <?= form_close(); ?>
-                                        </ul>
-
+                                        <?php
+                                        if (!empty($pages)) {
+                                            foreach ($pages as $page) {
+                                                echo '<li class=""><a href="' . site_url('page/' . $page->slug) . '">' . $page->name . '</a></li>';
+                                            }
+                                        }
+                                        ?>
                                         <!--                <form class="form-inline my-2 my-lg-0">
                                                             <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search">
                                                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                                         </form>-->
+                                    </ul>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
+                                        <?= shop_form_open('products', 'id="product-search-form"'); ?>
+                                        <div class="input-group">
+                                            <input name="query" type="text" class="form-control" id="product-search" aria-label="Buscar Productos..." placeholder="Buscar Productos...">
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                        <?= form_close(); ?>
+                                    </div>
                                 </div>
                             </nav> 
                         </div>
