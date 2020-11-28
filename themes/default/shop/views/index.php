@@ -119,7 +119,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Coffee Gallery</h4>
+                    <h4 class="title">Principales Categor&iacute;as</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -177,12 +177,12 @@
     </div> 
 </section>
 
-<section id="gallery2" class="gallery_area pt-95">
+<section id="veterinary" class="gallery_area pt-95">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-10">
-                    <h4 class="title">Productos Destacados</h4>
+                    <h4 class="title">Productos Veterinary</h4>
                     <p>Revise las ofertas y novedades que tenemos para tí.</p>
                     <span class="line">
                         <span class="box"></span>
@@ -445,7 +445,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Comentarios de Clientes</h4>
+                    <h4 class="title">Comentarios Nuestros Clientes</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -525,7 +525,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Upcoming</h4>
+                    <h4 class="title">Pr&oacute;ximamente</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>

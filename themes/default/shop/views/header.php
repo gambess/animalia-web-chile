@@ -193,9 +193,11 @@
                                         <li class="dropdown-divider"></li>
                                         <li class=""><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
                                         <li class=""><a class="page-scroll" href="#coffee">Ubicaciones</a></li>
-                                        <li class=""><a class="page-scroll" href="#about">Acerca</a></li>
-                                        <li class=""><a class="page-scroll" href="#gallery">Veterinary</a></li>
-                                        <li class=""><a class="page-scroll" href="#contact">Contáctanos</a></li>
+                                        <li class=""><a class="page-scroll" href="#about">Nosotros</a></li>
+                                        <li class=""><a class="page-scroll" href="#gallery">Categor&iacute;as</a></li>
+                                        <li class=""><a class="page-scroll" href="#veterinary">Veterinary</a></li>
+                                        <li class=""><a class="page-scroll" href="#upcoming">Pr&oacute;ximamente</a></li>
+                                        <li class=""><a class="page-scroll" href="#contact">Cont&aacute;ctanos</a></li>
                                         <li class="dropdown-divider"></li>
                                         <ul class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
                                             <?= shop_form_open('products', 'id="product-search-form"'); ?>

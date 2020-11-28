@@ -25,8 +25,17 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 order-md-1 order-lg-1">
                     <div class="footer_about mt-45">
-                        <h4 class="footer_title">Animalia</h4>
-                        <p>Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web.</p>
+                        <h4 class="footer_title"><?= lang('about_us'); ?></h4>
+                        <p><?= $shop_settings->description; ?> <a href="<?= site_url('page/' . $shop_settings->about_link); ?>"><?= lang('read_more'); ?></a></p>
+                        <p>
+                            <i class="fa fa-phone"></i> <span class="margin-left-md"><?= $shop_settings->phone; ?></span>
+                            <i class="fa fa-envelope margin-left-xl"></i> <span class="margin-left-md"><?= $shop_settings->email; ?></span>
+                        </p>
+                        <ul class="list-inline">
+                            <li><a href="<?= site_url('page/' . $shop_settings->privacy_link); ?>"><?= lang('privacy_policy'); ?></a></li>
+                            <li><a href="<?= site_url('page/' . $shop_settings->terms_link); ?>"><?= lang('terms_conditions'); ?></a></li>
+                            <li><a href="<?= site_url('page/' . $shop_settings->contact_link); ?>"><?= lang('contact_us'); ?></a></li>
+                        </ul>
                         <ul class="social">
                             <li><a href="https://www.facebook.com/Animalia-110563507299462"><i class="lni lni-facebook-filled"></i></a></li>
                             <!--<li><a href="#"><i class="lni lni-twitter-original"></i></a></li>-->
@@ -75,7 +84,7 @@
         </div> 
     </div> 
     <div class="footer_shape">
-        <img src="assets/images/footer_shape.png" alt="footer shape">
+        <img src="<?= $assets; ?>images/footer_shape.png" alt="footer shape">
     </div> 
 </section>
 <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
@@ -85,22 +94,6 @@
 <!--<section class="footer">
     <div class="container padding-bottom-md">
         <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <div class="title-footer"><span><?= lang('about_us'); ?></span></div>
-                <p>
-<?= $shop_settings->description; ?> <a href="<?= site_url('page/' . $shop_settings->about_link); ?>"><?= lang('read_more'); ?></a>
-                </p>
-                <p>
-                    <i class="fa fa-phone"></i> <span class="margin-left-md"><?= $shop_settings->phone; ?></span>
-                    <i class="fa fa-envelope margin-left-xl"></i> <span class="margin-left-md"><?= $shop_settings->email; ?></span>
-                </p>
-                <ul class="list-inline">
-                    <li><a href="<?= site_url('page/' . $shop_settings->privacy_link); ?>"><?= lang('privacy_policy'); ?></a></li>
-                    <li><a href="<?= site_url('page/' . $shop_settings->terms_link); ?>"><?= lang('terms_conditions'); ?></a></li>
-                    <li><a href="<?= site_url('page/' . $shop_settings->contact_link); ?>"><?= lang('contact_us'); ?></a></li>
-                </ul>
-            </div>
-
             <div class="clearfix visible-sm-block"></div>
             <div class="col-md-3 col-sm-6">
                 <div class="title-footer"><span><?= lang('payment_methods'); ?></span></div>
@@ -113,13 +106,13 @@
                 <p><?= $shop_settings->follow_text; ?></p>
                 <ul class="follow-us">
 <?php if (!empty($shop_settings->facebook)) { ?>
-                            <li><a target="_blank" href="<?= $shop_settings->facebook; ?>"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="<?= $shop_settings->facebook; ?>"><i class="fa fa-facebook"></i></a></li>
 <?php } if (!empty($shop_settings->twitter)) { ?>
-                            <li><a target="_blank" href="<?= $shop_settings->twitter; ?>"><i class="fa fa-twitter"></i></a></li>
+                                <li><a target="_blank" href="<?= $shop_settings->twitter; ?>"><i class="fa fa-twitter"></i></a></li>
 <?php } if (!empty($shop_settings->google_plus)) { ?>
-                            <li><a target="_blank" href="<?= $shop_settings->google_plus; ?>"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a target="_blank" href="<?= $shop_settings->google_plus; ?>"><i class="fa fa-google-plus"></i></a></li>
 <?php } if (!empty($shop_settings->instagram)) { ?>
-                            <li><a target="_blank" href="<?= $shop_settings->instagram; ?>"><i class="fa fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="<?= $shop_settings->instagram; ?>"><i class="fa fa-instagram"></i></a></li>
 <?php } ?>
                 </ul>
             </div>
@@ -246,7 +239,8 @@
             title: '<?= $product->code . ' - ' . $product->name; ?>',
             url: '<?= site_url('product/' . $product->slug); ?>',
             image: '<?= base_url('assets/uploads/' . $product->image); ?>',
-            description: '<?= $page_desc; ?>',
+            description: '<?= $page_desc; ?>'
+            //,
             // emailSubject: '',
             // emailBody: '',
         });
