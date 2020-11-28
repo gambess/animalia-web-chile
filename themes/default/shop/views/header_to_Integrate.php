@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript">if (parent.frames.length !== 0) {
                 top.location = '<?= site_url(); ?>';
-            }</script>
+            }
+        </script>
         <title><?= $page_title; ?></title>
         <meta name="description" content="<?= $page_desc; ?>">
         <link rel="shortcut icon" href="<?= $assets; ?>images/favicon.png">

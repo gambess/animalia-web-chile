@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+</section>
 <section class="page-contents">
     <div class="container">
         <div class="row">

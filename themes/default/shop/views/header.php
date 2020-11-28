@@ -89,12 +89,11 @@
                                         ?>
                                         <li class="dropdown-divider"></li>
                                         <?php if ($isPromo) { ?>
-                                            <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') == 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products?promo=yes'); ?>"><?= lang('promotions'); ?></a>
-                                            </li>
+                                            <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') == 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products?promo=yes'); ?>"><?= lang('promotions'); ?></a></li>
                                         <?php } ?>
-                                        <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') != 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a>
-                                        </li>
+                                        <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') != 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a></li>
                                         <li class="divider"></li>
+                                        <!-- Categories -->
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                                 <?= lang('categories'); ?> <span class="caret"></span>
@@ -118,6 +117,8 @@
                                                 ?>
                                             </ul>
                                         </li>
+                                        <!-- End Categories -->
+                                        <!-- Brands -->
                                         <li class="dropdown<?= (count($brands) > 20) ? ' mega-menu' : ''; ?>">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                                 <?= lang('brands'); ?> <span class="caret"></span>
@@ -186,16 +187,17 @@
                                             }
                                             ?>
                                         </li>
+                                        <!-- End Brands -->
                                         <?php if (!$shop_settings->hide_price) { ?>
                                             <li class="<?= $m == 'cart_ajax' && $v == 'index' ? 'active' : ''; ?>"><a href="<?= site_url('cart'); ?>"><?= lang('shopping_cart'); ?></a></li>
                                             <li class="<?= $m == 'cart_ajax' && $v == 'checout' ? 'active' : ''; ?>"><a href="<?= site_url('cart/checkout'); ?>"><?= lang('checkout'); ?></a></li>
                                         <?php } ?>
                                         <li class="dropdown-divider"></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#about">Acerca</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#gallery">Galeria</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#menu">Veterinary</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#contact">Contáctanos</a></li>
+                                        <li class=""><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
+                                        <li class=""><a class="page-scroll" href="#coffee">Acerca</a></li>
+                                        <li class=""><a class="page-scroll" href="#about">Compromiso</a></li>
+                                        <li class=""><a class="page-scroll" href="#gallery">Veterinary</a></li>
+                                        <li class=""><a class="page-scroll" href="#contact">Contáctanos</a></li>
                                         <li class="dropdown-divider"></li>
                                         <div class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
                                             <?= shop_form_open('products', 'id="product-search-form"'); ?>
@@ -218,4 +220,3 @@
                     </div> 
                 </div> 
             </div>  
-        </section>
