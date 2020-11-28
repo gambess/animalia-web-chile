@@ -500,10 +500,10 @@ p {
 .sticky {
   position: fixed;
   z-index: 99;
-  background-color: #fff;
+  background-color: transparent;
   -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: transparent;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
