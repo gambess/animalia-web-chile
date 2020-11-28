@@ -12,6 +12,9 @@
         <title><?= $page_title; ?></title>
         <meta name="description" content="<?= $page_desc; ?>">
         <link rel="shortcut icon" href="<?= $assets; ?>images/favicon.png">
+        
+         <link href="<?= $assets; ?>css/libs.min.css" rel="stylesheet">
+        
 
         <link href="<?= $assets; ?>css/animate.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/slick.css" rel="stylesheet">
@@ -19,6 +22,8 @@
         <link href="<?= $assets; ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/default.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/style.css" rel="stylesheet">
+        
+        <link href="<?= $assets; ?>css/styles.min.css" rel="stylesheet">
 
 
         <meta property="og:url" content="<?= isset($product) && !empty($product) ? site_url('product/' . $product->slug) : site_url(); ?>" />

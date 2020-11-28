@@ -119,7 +119,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Principales Categor&iacute;as</h4>
+                    <h4 class="title">Categor&iacute;as</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -310,7 +310,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Comentarios Nuestros Clientes</h4>
+                    <h4 class="title">Comentarios</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>

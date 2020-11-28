@@ -78,9 +78,12 @@
     </div> 
     <div class="footer_copyright">
         <div class="container">
+            <div class="copyright line-height-lg">
+                &copy; <?= date('Y'); ?> <?= $shop_settings->shop_name; ?>. <?= lang('all_rights_reserved'); ?>
+            </div>
             <div class="copyright text-center">
                 <p>Desarrollado por <a href="https://gambessit.cl" rel="nofollow">GambesS IT - CHILE</a></p>
-            </div> 
+            </div>
         </div> 
     </div> 
     <div class="footer_shape">
@@ -124,41 +127,7 @@
             <div class="copyright line-height-lg">
                 &copy; <?= date('Y'); ?> <?= $shop_settings->shop_name; ?>. <?= lang('all_rights_reserved'); ?>
             </div>
-            <ul class="list-inline pull-right line-height-md">
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-blue" data-color="blue"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-blue-grey" data-color="blue-grey"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-brown" data-color="brown"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-cyan" data-color="cyan"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-green" data-color="green"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-grey" data-color="grey"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-purple" data-color="purple"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-orange" data-color="orange"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-pink" data-color="pink"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-red" data-color="red"><i class="fa fa-square"></i></a>
-                </li>
-                <li class="padding-x-no text-size-lg">
-                    <a href="#" class="theme-color text-teal" data-color="teal"><i class="fa fa-square"></i></a>
-                </li>
-            </ul>
+            
             <div class="clearfix"></div>
         </div>
     </div>
