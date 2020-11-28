@@ -106,11 +106,11 @@
         </div>
     </div>
 <?php } ?>
+
 <script type="text/javascript">
     var m = '<?= $m; ?>', v = '<?= $v; ?>', products = {}, filters = <?= isset($filters) && !empty($filters) ? json_encode($filters) : '{}'; ?>, shop_color, shop_grid, sorting;
     var cart = <?= isset($cart) && !empty($cart) ? json_encode($cart) : '{}' ?>;
     var site = {base_url: '<?= base_url(); ?>', site_url: '<?= site_url('/'); ?>', shop_url: '<?= shop_url(); ?>', csrf_token: '<?= $this->security->get_csrf_token_name() ?>', csrf_token_value: '<?= $this->security->get_csrf_hash() ?>', settings: {display_symbol: '<?= $Settings->display_symbol; ?>', symbol: '<?= $Settings->symbol; ?>', decimals: <?= $Settings->decimals; ?>, thousands_sep: '<?= $Settings->thousands_sep; ?>', decimals_sep: '<?= $Settings->decimals_sep; ?>', order_tax_rate: false, products_page: <?= $shop_settings->products_page ? 1 : 0; ?>}, shop_settings: {private: <?= $shop_settings->private ? 1 : 0; ?>, hide_price: <?= $shop_settings->hide_price ? 1 : 0; ?>}}
-
     var lang = {};
     lang.page_info = '<?= lang('page_info'); ?>';
     lang.cart_empty = '<?= lang('empty_cart'); ?>';
@@ -142,19 +142,29 @@
 </script>
 <script src="<?= $assets; ?>js/vendor/jquery-3.5.1.min.js"></script>
 <script src="<?= $assets; ?>js/vendor/modernizr-3.7.1.min.js"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<script src="<?= $assets; ?>js/popper.min.js" ></script>
 <script src="<?= $assets; ?>js/bootstrap.min.js"></script>
-<script src="<?= $assets; ?>js/form_validation.min.js"></script>
+<script src="<?= $assets; ?>js/slick.min.js" type="text/javascript"></script>
+<script src="<?= $assets; ?>js/ajax-contact.js" type="text/javascript"></script>
+<script src="<?= $assets; ?>js/jquery.easing.min.js" type="text/javascript"></script>
+<script src="<?= $assets; ?>js/scrolling-nav.js" type="text/javascript"></script>
+<script src="<?= $assets; ?>js/wow.min.js" type="text/javascript"></script>
+<script src="<?= $assets; ?>js/main.js" type="text/javascript"></script>
+
+<!--<script src="<?= $assets; ?>js/form_validation.min.js"></script>
 <script src="<?= $assets; ?>js/sticky_kit.min.js"></script>
 <script src="<?= $assets; ?>js/bootstrap_select.min.js"></script>
-<script src="<?= $assets; ?>js/scripts.min.js"></script>
+<script src="<?= $assets; ?>js/scripts.min.js"></script>-->
+     
+
+
 <?php if ($m == 'shop' && $v == 'product') { ?>
     <script type="text/javascript">
         $(document).ready(function ($) {
             $('.rrssb-buttons').rrssb({
                 title: '<?= $product->code . ' - ' . $product->name; ?>',
                 url: '<?= site_url('product/' . $product->slug); ?>',
-                image: '<?= base_url('assets/uploads/' . $product->image); ?>',
+                image: '<?= base_url('<?= $assets; ?>uploads/' . $product->image); ?>',
                 description: '<?= $page_desc; ?>',
                 // emailSubject: '',
                 // emailBody: '',

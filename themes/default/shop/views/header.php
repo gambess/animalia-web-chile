@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <nav class="navbar navbar-light bg-transparent">
+                            <nav class="navbar bg-transparent">
                                 <a class="navbar-brand" href="index.html">
                                     <img alt="<?= $shop_settings->shop_name; ?>" src="<?= base_url('assets/uploads/logos/' . $shop_settings->logo); ?>" class="img-responsive" />
                                 </a>
@@ -190,12 +190,12 @@
                                             <li class="<?= $m == 'cart_ajax' && $v == 'index' ? 'active' : ''; ?>"><a href="<?= site_url('cart'); ?>"><?= lang('shopping_cart'); ?></a></li>
                                             <li class="<?= $m == 'cart_ajax' && $v == 'checout' ? 'active' : ''; ?>"><a href="<?= site_url('cart/checkout'); ?>"><?= lang('checkout'); ?></a></li>
                                         <?php } ?>
-<!--                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-divider"></li>
                                         <li class="nav-item"><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
                                         <li class="nav-item"><a class="page-scroll" href="#about">Acerca</a></li>
                                         <li class="nav-item"><a class="page-scroll" href="#gallery">Galeria</a></li>
                                         <li class="nav-item"><a class="page-scroll" href="#menu">Veterinary</a></li>
-                                        <li class="nav-item"><a class="page-scroll" href="#contact">Contáctanos</a></li>-->
+                                        <li class="nav-item"><a class="page-scroll" href="#contact">Contáctanos</a></li>
                                         <li class="dropdown-divider"></li>
                                         <ul class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
                                             <?= shop_form_open('products', 'id="product-search-form"'); ?>
@@ -212,6 +212,7 @@
                                                             <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search">
                                                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                                         </form>-->
+                                    </ul>
                                 </div>
                             </nav> 
                         </div>
