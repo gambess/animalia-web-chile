@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php if (!empty($slider)) { ?>
-    <section class="header_area">
         <div id="home" class="header_slider slider-active">
             <?php
             $sr = 0;
@@ -18,9 +17,9 @@
             }
             ?>
         </div>
-    </section>
+    
 <?php } ?>
-
+</section>
 <section id="coffee" class="coffee_area pt-120">
     <div class="container">
         <div class="row justify-content-center">
