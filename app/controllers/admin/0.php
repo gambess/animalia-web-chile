@@ -15,5 +15,4 @@
             ->join('units', 'products.unit=units.id', 'left')
             ->join('brands', 'products.brand=brands.id', 'left');
         // ->group_by("products.id");
-
-        ?>
+}
