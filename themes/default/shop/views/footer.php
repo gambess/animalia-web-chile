@@ -140,7 +140,9 @@
     lang.out_of_stock = '<?= lang('out_of_stock'); ?>';
     lang.x_product = '<?= lang('x_product'); ?>';
 </script>
-<script src="<?= $assets; ?>js/jquery.min.js"></script>
+<script src="<?= $assets; ?>js/vendor/jquery-3.5.1.min.js"></script>
+<script src="<?= $assets; ?>js/vendor/modernizr-3.7.1.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 <script src="<?= $assets; ?>js/bootstrap.min.js"></script>
 <script src="<?= $assets; ?>js/form_validation.min.js"></script>
 <script src="<?= $assets; ?>js/sticky_kit.min.js"></script>
