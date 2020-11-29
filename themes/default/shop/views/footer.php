@@ -194,8 +194,11 @@
 <script src="<?= $assets; ?>js/scrolling-nav.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/wow.min.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/main.js" type="text/javascript"></script>
+
+<script src="<?= $assets; ?>js/libs.min.js"></script>
 <script src="<?= $assets; ?>js/form_validation.min.js"></script>
 <script src="<?= $assets; ?>js/sticky_kit.min.js"></script>
+<script src="<?= $assets; ?>js/accounting.min.js"></script>
 <script src="<?= $assets; ?>js/bootstrap_select.min.js"></script>
 <script src="<?= $assets; ?>js/scripts.min.js"></script>
 
