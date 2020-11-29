@@ -178,7 +178,7 @@
 </section>
 
 <!--<section  class="gallery_area pt-95 | page-contents">-->
-<section id="veterinary" class="page-content gallery_area pt-95 ">
+<section class="page-contents">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
