@@ -22,6 +22,7 @@
         <link href="<?= $assets; ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/default.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/style.css" rel="stylesheet">
+        <link href="<?= $assets; ?>css/csshake.min.css" rel="stylesheet">
         
         <link href="<?= $assets; ?>css/libs.min.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/styles.min.css" rel="stylesheet">

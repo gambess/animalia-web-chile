@@ -29,6 +29,15 @@
 
 <?php } ?>
 </section>
+
+<div class="row justify-content-center">
+            <span class="shake-slow shake-constant">&#128021;</span>
+            <span class="shake-slow shake-constant">&#128021;</span>
+            <span class="shake-slow shake-constant">&#128021;</span>
+            <span class="shake-slow shake-constant">&#128021;</span>
+            <span class="shake-slow shake-constant">&#128021;</span>
+        </div>
+
 <section id="coffee" class="coffee_area pt-120">
     <div class="container">
         <div class="row justify-content-center">
@@ -79,6 +88,13 @@
     </div> 
 </section>
 
+<div class="row justify-content-center">
+            <span class="shake-hard shake-slow shake-constant">&#128054;</span>
+            <span class="shake-hard shake-slow shake-constant">&#128054;</span>
+            <span class="shake-hard shake-slow shake-constant">&#128054;</span>
+            <span class="shake-hard shake-slow shake-constant">&#128054;</span>
+            <span class="shake-hard shake-slow shake-constant">&#128054;</span>
+        </div>
 
 <section id="about" class="about_area pt-120 pb-130">
     <div class="container">
@@ -113,6 +129,14 @@
         </div> 
     </div> 
 </section>
+
+<div class="row justify-content-center">
+            <span class="shake-little shake-slow shake-constant">&#128041;</span>
+            <span class="shake-little shake-slow shake-constant">&#128041;</span>
+            <span class="shake-little shake-slow shake-constant">&#128041;</span>
+            <span class="shake-little shake-slow shake-constant">&#128041;</span>
+            <span class="shake-little shake-slow shake-constant">&#128041;</span>
+        </div>
 
 <section id="gallery" class="gallery_area pt-120 pb-130">
     <div class="container">
@@ -176,6 +200,14 @@
         </div> 
     </div> 
 </section>
+
+<div class="row justify-content-center">
+            <span class="shake-horizontal shake-slow shake-constant">&#128008;</span>
+            <span class="shake-horizontal shake-slow shake-constant">&#128008;</span>
+            <span class="shake-horizontal shake-slow shake-constant">&#128008;</span>
+            <span class="shake-horizontal shake-slow shake-constant">&#128008;</span>
+            <span class="shake-horizontal shake-slow shake-constant">&#128008;</span>
+        </div>
 
 <section id="featured" class="customer_area pt-120">
     <div class="container">
@@ -327,6 +359,14 @@
         </div> 
     </div> 
 </section>
+
+<div class="row justify-content-center">
+            <span class="shake-vertical shake-constant">&#128062;</span>
+            <span class="shake-vertical shake-constant">&#128062;</span>
+            <span class="shake-vertical shake-constant">&#128062;</span>
+            <span class="shake-vertical shake-constant">&#128062;</span>
+            <span class="shake-vertical shake-constant">&#128062;</span>
+        </div>
 
 <!--<section id="featured" class="customer_area pt-120">
     <div class="container">
