@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?= form_open('login', 'class="validate"'); ?>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12">
         <div class="form-group">
             <?php if (!$shop_settings->private) { ?>
                 <a href="<?= site_url('login#register'); ?>" class="pull-right text-blue"><?= lang('register'); ?></a>
