@@ -56,7 +56,7 @@
             <div class="col-lg-4 col-md-7 col-sm-9">
                 <div class="single_coffee text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                     <div class="coffee_image">
-                        <img src="<?= $assets; ?>images/rural.jpg" alt="coffee">
+                        <img src="<?= $assets; ?>images/azapa.jpg" alt="coffee">
                     </div>
                     <div class="coffee_content">
                         <h4 class="coffee_title">Animalia Azapa</h4>
@@ -100,8 +100,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <h4 class="about_title">Animalia, Soluciones Veterinarias Integrales</h4>
-                    <p>Animalia, Animalia Express, Animalia Azapa, Animalia Azapa, Animalia Express, Animalia Azapa, Animalia Web. <br> <br> Animalia Express, Animalia Rural, Animalia Web, Animalia Express, Animalia Rural, Animalia Web.</p>
+                    <h4 class="about_title">Soluciones Veterinarias Integrales</h4>
+                    <p>Animalia, Express, Azapa, Animalia Web, Animalia Fono Pedido, Animalia Express, Animalia Azapa, Animalia Web. </p>
                     <ul class="social">
                         <li><a href="https://www.facebook.com/Animalia-110563507299462"><i class="lni lni-facebook-filled"></i></a></li>
                         <!--<li><a href="#"><i class="lni lni-twitter-original"></i></a></li>-->
@@ -119,7 +119,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Categor&iacute;as</h4>
+                    <h4 class="title">Principales Categor&iacute;as</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -132,10 +132,10 @@
             <div class="col-md-6 col-sm-12">
                 <div class="single_gallery mt-30">
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-1.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-2.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Coffee 1</h5>
+                        <h5 class="gallery_title">Accesorios</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -143,10 +143,10 @@
             <div class="col-md-6 col-sm-12">
                 <div class="single_gallery mt-30">
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-2.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-1.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Coffee 2</h5>
+                        <h5 class="gallery_title">Alimentos</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -157,7 +157,7 @@
                         <img src="<?= $assets; ?>images/gallery-3.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Coffee 3</h5>
+                        <h5 class="gallery_title">Arenas Sanitarias</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -168,7 +168,29 @@
                         <img src="<?= $assets; ?>images/gallery-4.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Coffee 4</h5>
+                        <h5 class="gallery_title">Enfermer&iacute;a</h5>
+                        <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="single_gallery mt-30">
+                    <div class="gallery_image">
+                        <img src="<?= $assets; ?>images/gallery-5.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery_content">
+                        <h5 class="gallery_title">Higiene</h5>
+                        <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="single_gallery mt-30">
+                    <div class="gallery_image">
+                        <img src="<?= $assets; ?>images/gallery-6.jpg" alt="gallery">
+                    </div>
+                    <div class="gallery_content">
+                        <h5 class="gallery_title">Ofertas</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -325,8 +347,8 @@
                     </div>
                     <div class="customer_content media-body">
                         <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Justyna Helen</h5>
-                            <span class="sub_title">Coffee Lover</span>
+                            <h5 class="author_name">Pamela L&oacute;pez</h5>
+                            <span class="sub_title">Dog Lover</span>
                             <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
                             <ul class="star">
                                 <li><i class="lni lni-star-filled"></i></li>
@@ -346,8 +368,8 @@
                     </div>
                     <div class="customer_content media-body">
                         <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Fajar Siddiq</h5>
-                            <span class="sub_title">Coffee Enthusiast</span>
+                            <h5 class="author_name">Cristina Suarez</h5>
+                            <span class="sub_title">Cat Lover</span>
                             <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
                             <ul class="star">
                                 <li><i class="lni lni-star-filled"></i></li>
@@ -367,8 +389,71 @@
                     </div>
                     <div class="customer_content media-body">
                         <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Rob Hope</h5>
-                            <span class="sub_title">Enthusiasts</span>
+                            <h5 class="author_name">Juan y Ana</h5>
+                            <span class="sub_title">Cat Lovers</span>
+                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
+                            <ul class="star">
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_customer d-sm-flex align-items-center mt-30">
+                    <div class="customer_image">
+                        <img src="<?= $assets; ?>images/customer-4.jpg" alt="customer">
+                    </div>
+                    <div class="customer_content media-body">
+                        <div class="customer_content_wrapper media-body">
+                            <h5 class="author_name">Francisca S&aacute;nchez</h5>
+                            <span class="sub_title">Cat Lovers</span>
+                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
+                            <ul class="star">
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_customer d-sm-flex align-items-center mt-30">
+                    <div class="customer_image">
+                        <img src="<?= $assets; ?>images/customer-5.jpg" alt="customer">
+                    </div>
+                    <div class="customer_content media-body">
+                        <div class="customer_content_wrapper media-body">
+                            <h5 class="author_name">Familia Garcia</h5>
+                            <span class="sub_title">Dog Lovers</span>
+                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
+                            <ul class="star">
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_customer d-sm-flex align-items-center mt-30">
+                    <div class="customer_image">
+                        <img src="<?= $assets; ?>images/customer-6.jpg" alt="customer">
+                    </div>
+                    <div class="customer_content media-body">
+                        <div class="customer_content_wrapper media-body">
+                            <h5 class="author_name">Isabela G&oacute;mez</h5>
+                            <span class="sub_title">Dog Lover</span>
                             <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
                             <ul class="star">
                                 <li><i class="lni lni-star-filled"></i></li>
@@ -401,7 +486,7 @@
             <div class="col-lg-6">
                 <div class="single_upcoming mt-30 d-sm-flex align-items-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.3s">
                     <div class="upcoming_image">
-                        <img src="<?= $assets; ?>images/upcoming-1.jpg" alt="upcoming">
+                        <img src="<?= $assets; ?>images/upcoming-3.jpg" alt="upcoming">
                     </div>
                     <div class="upcoming_content media-body">
                         <h4 class="upcoming_title"><a href="#">Lorem ipsum dolor sit amdi scing elitr diam nonumy</a></h4>
@@ -413,6 +498,28 @@
                 <div class="single_upcoming mt-30 d-sm-flex align-items-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s">
                     <div class="upcoming_image">
                         <img src="<?= $assets; ?>images/upcoming-2.jpg" alt="upcoming">
+                    </div>
+                    <div class="upcoming_content media-body">
+                        <h4 class="upcoming_title"><a href="#">Lorem ipsum dolor sit amdi scing elitr diam nonumy</a></h4>
+                        <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_upcoming mt-30 d-sm-flex align-items-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                    <div class="upcoming_image">
+                        <img src="<?= $assets; ?>images/upcoming-4.jpg" alt="upcoming">
+                    </div>
+                    <div class="upcoming_content media-body">
+                        <h4 class="upcoming_title"><a href="#">Lorem ipsum dolor sit amdi scing elitr diam nonumy</a></h4>
+                        <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_upcoming mt-30 d-sm-flex align-items-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                    <div class="upcoming_image">
+                        <img src="<?= $assets; ?>images/upcoming-1.jpg" alt="upcoming">
                     </div>
                     <div class="upcoming_content media-body">
                         <h4 class="upcoming_title"><a href="#">Lorem ipsum dolor sit amdi scing elitr diam nonumy</a></h4>
