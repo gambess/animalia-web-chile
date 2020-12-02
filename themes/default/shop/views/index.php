@@ -199,88 +199,86 @@
     </div> 
 </section>
 
-<!--<section  class="gallery_area pt-95 | page-contents">-->
-<section class="page-contents">
+<section id="featured" class="customer_area pt-120">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-
-                <div class="row">
-                    <div class="col-xs-9">
-                        <h3 class="margin-top-no text-size-lg">
-                            <?= lang('featured_products'); ?>
-                        </h3>
-                    </div>
-                    <?php
-                    if (count($featured_products) > 8) {
-                        ?>
-                        <div class="col-xs-3">
-                            <div class="controls pull-right hidden-xs">
-                                <a class="left fa fa-chevron-left btn btn-xs btn-default" href="#carousel-example"
-                                   data-slide="prev"></a>
-                                <a class="right fa fa-chevron-right btn btn-xs btn-default" href="#carousel-example"
-                                   data-slide="next"></a>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    ?>
+            <div class="col-md-12">
+                <div class="section_title text-center pb-30">
+                    <h4 class="title"><?= lang('featured_products'); ?></h4>
+                    <span class="line">
+                        <span class="box"></span>
+                    </span>
                 </div>
-
-                <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                    <!-- Wrapper for slides -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                    <!-- Carousel indicators -->
+<!--                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>   -->
+                    <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
                         <?php
                         $r = 0;
-                        foreach (array_chunk($featured_products, 8) as $fps) {
+                        foreach (array_chunk($featured_products, 4) as $fps) {
                             ?>
-                            <div class="item row <?= empty($r) ? 'active' : ''; ?>">
-                                <div class="featured-products">
+                            <div class="carousel-item <?= empty($r) ? 'active' : ''; ?>">
+                                <div class="row">
                                     <?php
                                     foreach ($fps as $fp) {
                                         ?>
-                                        <div class="col-sm-6 col-md-3">
-                                            <div class="product" style="z-index: 1;">
-                                                <div class="details" style="transition: all 100ms ease-out 0s;">
+                                        <div class="col-sm-3">
+                                            <div class="thumb-wrapper">
+                                                <?php
+                                                if ($fp->promotion) {
+                                                    ?>
+                                                    <span class="badge badge-right theme"><?= lang('promo'); ?></span>
                                                     <?php
-                                                    if ($fp->promotion) {
+                                                }
+                                                ?>
+                                                <div class="img-box">
+                                                    <img src="<?= base_url('assets/uploads/' . $fp->image); ?>" class="img-fluid" alt="">
+                                                </div>
+                                                <br />
+                                                <div class="thumb-content">
+                                                    <h5><a href="<?= site_url('product/' . $fp->slug); ?>"><?= $fp->name; ?></a></h5>
+                                                    <?php if (!$shop_settings->hide_price) { ?>
+                                                        <p class="item-price">
+                                                            <?php
+                                                            echo '<!--<strike>$400.00</strike>-->';
+                                                            if ($fp->promotion) {
+                                                                echo '<span>' . $this->sma->convertMoney($fp->promo_price) . '</span><br>';
+                                                            } else {
+                                                                echo '<span>' . $this->sma->convertMoney(isset($fp->special_price) && !empty(isset($fp->special_price)) ? $fp->special_price : $fp->price) . '</span><br>';
+                                                            }
+                                                            ?>
+                                                        </p>
+                                                    <?php } ?>
+                                                    <a href="<?= site_url('category/' . $fp->category_slug); ?>" class="link"><?= $fp->category_name; ?></a>
+                                                    <?php
+                                                    if ($fp->brand_name) {
                                                         ?>
-                                                        <span class="badge badge-right theme"><?= lang('promo'); ?></span>
+                                                        <span class="link">-</span>
+                                                        <a href="<?= site_url('brand/' . $fp->brand_slug); ?>" class="link"><?= $fp->brand_name; ?></a>
                                                         <?php
                                                     }
                                                     ?>
-                                                    <img src="<?= base_url('assets/uploads/' . $fp->image); ?>" alt="">
-                                                    <?php if (!$shop_settings->hide_price) { ?>
-                                                        <div class="image_overlay"></div>
-                                                        <div class="btn add-to-cart" data-id="<?= $fp->id; ?>"><i class="fa fa-shopping-cart"></i> <?= lang('add_to_cart'); ?></div>
-                                                    <?php } ?>
-                                                    <div class="stats-container">
-                                                        <?php if (!$shop_settings->hide_price) { ?>
-                                                            <span class="product_price">
-                                                                <?php
-                                                                if ($fp->promotion) {
-                                                                    echo '<del class="text-red">' . $this->sma->convertMoney(isset($fp->special_price) && !empty(isset($fp->special_price)) ? $fp->special_price : $fp->price) . '</del><br>';
-                                                                    echo $this->sma->convertMoney($fp->promo_price);
-                                                                } else {
-                                                                    echo $this->sma->convertMoney(isset($fp->special_price) && !empty(isset($fp->special_price)) ? $fp->special_price : $fp->price);
-                                                                }
-                                                                ?>
-                                                            </span>
-                                                        <?php } ?>
-                                                        <span class="product_name">
-                                                            <a href="<?= site_url('product/' . $fp->slug); ?>"><?= $fp->name; ?></a>
-                                                        </span>
-                                                        <a href="<?= site_url('category/' . $fp->category_slug); ?>" class="link"><?= $fp->category_name; ?></a>
-                                                        <?php
-                                                        if ($fp->brand_name) {
-                                                            ?>
-                                                            <span class="link">-</span>
-                                                            <a href="<?= site_url('brand/' . $fp->brand_slug); ?>" class="link"><?= $fp->brand_name; ?></a>
-                                                            <?php
-                                                        }
-                                                        ?>
+                                                    <br />
+                                                    <div class="star-rating text-center">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="clearfix"></div>
+                                                    <br />
+                                                    <?php if (!$shop_settings->hide_price) { ?>
+                                                        <div class="text-center">                                                        
+                                                            <a href="#" data-id="<?= $fp->id; ?>" class="btn btn-primary center-block"><i class="fa fa-shopping-cart"></i> <?= lang('add_to_cart'); ?></a>                                                    
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -294,12 +292,29 @@
                         }
                         ?>
                     </div>
+                    <?php
+                    if (count($featured_products) > 4) {
+                        ?>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <?php
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-
+<br />
+<br />
+<br />
+<br />
 
 <section id="counter" class="counter_area pt-50 pb-95 bg_cover text-center" style="background-image: url(<?= $assets; ?>images/counter_bg.jpg)">
     <div class="container">
