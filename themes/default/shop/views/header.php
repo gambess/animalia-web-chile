@@ -201,7 +201,7 @@
                                         <li class=""><a class="page-scroll" href="#coffee">Ubicaciones</a></li>
                                         <li class=""><a class="page-scroll" href="#about">Nosotros</a></li>
                                         <li class=""><a class="page-scroll" href="#gallery">Categor&iacute;as</a></li>
-                                        <li class=""><a class="page-scroll" href="#veterinary">Veterinary</a></li>
+                                        <li class=""><a class="page-scroll" href="#featured">Destacados</a></li>
                                         <li class=""><a class="page-scroll" href="#upcoming">Pr&oacute;ximamente</a></li>
                                         <li class=""><a class="page-scroll" href="#contact">Cont&aacute;ctanos</a></li>
                                         <li class="dropdown-divider"></li>
