@@ -1,21 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-<?php if (DEMO && ($m == 'main' && $v == 'index')) { ?>
-<div class="page-contents padding-top-no">
-    <div class="container">
-        <div class="alert alert-info margin-bottom-no">
-            <p>
-                <strong>Shop module is not complete item but add-on to Stock Manager Advance and is available separately.</strong><br>
-                This is joint demo for main item (Stock Manager Advance) and add-ons (POS & Shop Module). Please check the item page on codecanyon.net for more info about what's not included in the item and you must read the page there before purchase. Thank you
-            </p>
-        </div>
-    </div>
-</div>
-<?php } ?>
-
 <section class="footer">
     <div class="container padding-bottom-md">
         <div class="row">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-12">
                 <div class="title-footer"><span><?= lang('about_us'); ?></span></div>
                 <p>
                     <?= $shop_settings->description; ?> <a href="<?= site_url('page/'.$shop_settings->about_link); ?>"><?= lang('read_more'); ?></a>
@@ -25,20 +12,20 @@
                     <i class="fa fa-envelope margin-left-xl"></i> <span class="margin-left-md"><?= $shop_settings->email; ?></span>
                 </p>
                 <ul class="list-inline">
-                    <li><a href="<?= site_url('page/'.$shop_settings->privacy_link); ?>"><?= lang('privacy_policy'); ?></a></li>
-                    <li><a href="<?= site_url('page/'.$shop_settings->terms_link); ?>"><?= lang('terms_conditions'); ?></a></li>
-                    <li><a href="<?= site_url('page/'.$shop_settings->contact_link); ?>"><?= lang('contact_us'); ?></a></li>
+                    <li class="list-inline-item"><a href="<?= site_url('page/'.$shop_settings->privacy_link); ?>"><?= lang('privacy_policy'); ?></a></li>
+                    <li class="list-inline-item"><a href="<?= site_url('page/'.$shop_settings->terms_link); ?>"><?= lang('terms_conditions'); ?></a></li>
+                    <li class="list-inline-item"><a href="<?= site_url('page/'.$shop_settings->contact_link); ?>"><?= lang('contact_us'); ?></a></li>
                 </ul>
             </div>
 
-            <div class="clearfix visible-sm-block"></div>
-            <div class="col-md-3 col-sm-6">
+            <div class="clearfix d-none d-sm-block d-md-none-block"></div>
+            <div class="col-lg-3 col-md-6">
                 <div class="title-footer"><span><?= lang('payment_methods'); ?></span></div>
                 <p><?= $shop_settings->payment_text; ?></p>
-                <img class="img-responsive" src="<?= $assets; ?>/images/payment-methods.png" alt="Payment Methods">
+                <img class="img-fluid" src="<?= $assets; ?>/images/payment-methods.png" alt="Payment Methods">
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-lg-3 col-md-6">
                 <div class="title-footer"><span><?= lang('follow_us'); ?></span></div>
                 <p><?= $shop_settings->follow_text; ?></p>
                 <ul class="follow-us">
@@ -61,38 +48,38 @@
             <div class="copyright line-height-lg">
                 &copy; <?= date('Y'); ?> <?= $shop_settings->shop_name; ?>. <?= lang('all_rights_reserved'); ?>
             </div>
-            <ul class="list-inline pull-right line-height-md">
-                <li class="padding-x-no text-size-lg">
+            <ul class="list-inline float-right line-height-md">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-blue" data-color="blue"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-blue-grey" data-color="blue-grey"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-brown" data-color="brown"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-cyan" data-color="cyan"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-green" data-color="green"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-grey" data-color="grey"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-purple" data-color="purple"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-orange" data-color="orange"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-pink" data-color="pink"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-red" data-color="red"><i class="fa fa-square"></i></a>
                 </li>
-                <li class="padding-x-no text-size-lg">
+                <li class="padding-x-no text-size-lg list-inline-item">
                     <a href="#" class="theme-color text-teal" data-color="teal"><i class="fa fa-square"></i></a>
                 </li>
             </ul>
@@ -153,7 +140,11 @@
     lang.out_of_stock = '<?= lang('out_of_stock'); ?>';
     lang.x_product = '<?= lang('x_product'); ?>';
 </script>
+<script src="<?= $assets; ?>js/vendor/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?= $assets; ?>js/libs.min.js"></script>
+<script src="<?= $assets; ?>js/popper.min.js"></script>
+<script src="<?= $assets; ?>js/bootstrap.min.js"></script>
 <script src="<?= $assets; ?>js/scripts.min.js"></script>
 <?php if ($m == 'shop' && $v == 'product') { ?>
 <script type="text/javascript">

@@ -21,7 +21,7 @@
                     $sr = 0;
                     foreach ($slider as $slide) {
                         if (!empty($slide->image)) {
-                            echo '<div class="item'.($sr == 0 ? ' active' : '').'">';
+                            echo '<div class="item'.($sr == 0 ? ' active' : '').' carousel-item">';
                             if (!empty($slide->link)) {
                                 echo '<a href="'.$slide->link.'">';
                             }
@@ -56,10 +56,10 @@
 <section class="page-contents">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-12">
 
                 <div class="row">
-                    <div class="col-xs-9">
+                    <div class="col-9">
                         <h3 class="margin-top-no text-size-lg">
                             <?= lang('featured_products'); ?>
                         </h3>
