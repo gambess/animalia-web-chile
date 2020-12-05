@@ -23,8 +23,7 @@
         <link href="<?= $assets; ?>css/default.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/style.css" rel="stylesheet">
         
-        <link href="<?= $assets; ?>css/libs.min.css" rel="stylesheet">
-        <link href="<?= $assets; ?>css/styles.min.css" rel="stylesheet">
+        
 
 
         <meta property="og:url" content="<?= isset($product) && !empty($product) ? site_url('product/' . $product->slug) : site_url(); ?>" />
@@ -82,7 +81,7 @@
                                             ?>
                                             <li>
                                                 <div class="dropdown">
-                                                    <a href="#"class="dropdown-toggle" id="dropdownLogin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                    <a href="#" class="dropdown-toggle" id="dropdownLogin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                                         <i class="fa fa-sign-in"></i> <?= lang('login'); ?> <span class="caret"></span>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-login" aria-labelledby="dropdownLogin" data-dropdown-in="zoomIn" data-dropdown-out="fadeOut">

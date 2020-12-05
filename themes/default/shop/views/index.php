@@ -8,7 +8,8 @@
             if (!empty($slide->image)) {
                 echo '<div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(' . base_url('assets/uploads/' . $slide->image) . ')">';
                 if (!empty($slide->caption)) {
-                    echo '<div class="container">'
+                    echo
+                    '<div class="container">'
                     . '<div class="row">'
                     . '<div class="col-md-9">'
                     . '<div class="slider_content">'
@@ -20,7 +21,15 @@
                     echo '<a href="' . $slide->link . '" class="main-btn">Enlace ' . $sr . ' </a>'
                     ;
                 }
-                echo '</div></div></div></div></div>';
+                if (!empty($slide->caption)) {
+                    echo '</div>'
+                    . '</div>'
+                    . '</div>'
+                    . '</div>'
+                    ;
+                }
+                echo '</div>'
+                ;
             }
             $sr++;
         }
@@ -211,11 +220,11 @@
                 </div>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
                     <!-- Carousel indicators -->
-<!--                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>   -->
+                    <!--                    <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        </ol>   -->
                     <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
                         <?php
