@@ -7,7 +7,7 @@
  */
 
     // For quick cash buttons -  if you need to format the currency please do it according to you system settings
-$lang['quick_cash_notes']                           = array('10', '20', '50', '100', '500', '1000', '5000');
+$lang['quick_cash_notes']                           = array('10', '50', '100', '500', '1000', '2000', '5000', '10000', '20000');
 
 $lang['pos_settings']                               = "Ajustes POS";
     /* POS Configuration */
@@ -42,7 +42,7 @@ $lang['cancel_sale']                                = "Cancelar Venta";
 $lang['suspend_sale']                               = "Suspender Venta";
 $lang['print_items_list']                           = "Imprimir Lista de productos";
 $lang['finalize_sale']                              = "Finalizar Venta";
-$lang['today_sale']                                 = "Ventas de Hoy";
+$lang['today_sale']                                 = "Venta de hoy";
 $lang['open_hold_bills']                            = "Abrir Ventas Suspendidas";
 $lang['close_register']                             = "Cerrar Registradora";
 
@@ -99,7 +99,7 @@ $lang['ajax_error']                                 = "Falló el Requerimiento, 
 $lang['close']                                      = "Cerrar";
 $lang['finalize_sale']                              = "Finalizar Venta";
 $lang['cash_sale']                                  = "Pago en Efectivo";
-$lang['cc_sale']                                    = "Pago Con Tarjeta de Crédito";
+$lang['cc_sale']                                    = "Pago Con Transbank";
 $lang['ch_sale']                                    = "Pago con Cheque";
 $lang['sure_to_suspend_sale']                       = "¿Está seguro de suspend Venta?";
 $lang['leave_alert']                                = "Va a perder la información de la venta. Pulse OK para salir o Cancelar para quedarse en ésta página.";
@@ -118,7 +118,7 @@ $lang['print']                                      = "Imprimir";
 $lang['cf_display_on_bill']                         = "Campo personalizado para presentar en el recibo del POS";
 
 $lang['cash']                                       = "Efectivo";
-$lang['cc']                                         = "Tarjeta de Crédito";
+$lang['cc']                                         = "Transbank";
 $lang['cheque']                                     = "Cheque";
 $lang['cc_no']                                      = "Tarjeta de Crédito No";
 $lang['cc_holder']                                  = "Nombre en la Tarjeta";
@@ -172,7 +172,7 @@ $lang['cash_in_hand']                               = "Efectivo en mano";
 $lang['total_cash']                                 = "Total Efectivo";
 $lang['total_cheques']                              = "Total Cheques";
 $lang['total_cc_slips']                             = "Total Tarjeta de Crédito deslizadas";
-$lang['CC']                                         = "Tarjeta de Crédito";
+$lang['CC']                                         = "Transbank";
 $lang['register_closed']                            = "Registro correctamente cerrada";
 $lang['register_not_open']                          = "El registro no está abierto, Por favor digite el efectivo en mano y pulse Abrir Registro";
 $lang['welcome_to_pos']                             = "Bienvenido a POS";
@@ -212,7 +212,7 @@ $lang['pos_setting_updated_payment_failed']         = "Ajustes POS correctamente
 
 $lang['edit_order_discount']                        = "Editar Descuento de la Orden";
 $lang['sale_note']                                  = "Nota de venta";
-$lang['staff_note']                                 = "Staff Note";
+$lang['staff_note']                                 = "Nota para empleados";
 $lang['list_open_registers']                        = "Ver Lista de Cajas Abiertas";
 $lang['open_registers']                             = "Open Registers";
 $lang['opened_at']                                  = "Abierta a las";
@@ -234,13 +234,14 @@ $lang['delete_code']                                = "POS Pin Code";
 $lang['quantity_out_of_stock_for_%s']               = "The quantity is out of stock for %s";
 $lang['refunds']                                    = "Reembolsos";
 $lang['register_details']                           = "Register Details";
-$lang['payment_note']                               = "Payment Note";
+$lang['payment_note']                               = "Nota de Pago";
 $lang['to_nearest_005']                             = "To nearest 0.05";
 $lang['to_nearest_050']                             = "To nearest 0.50";
 $lang['to_nearest_number']                          = "To nearest number (integer)";
 $lang['to_next_number']                             = "To next number (integer)";
 $lang['update_heading']                             = "This page will help you check and install the updates easily with single click. <strong>If there are more than 1 updates available, please update them one by one starting from the top (lowest version)</strong>.";
-$lang['update_successful']                          = "Item successfully updated";
+$lang['update_successful']                          = "Item actualizado correctamente";
 $lang['using_latest_update']                        = "You are using the latest version.";
 $lang['order']                                      = "Orden";
 $lang['bill']                                       = "Factura";
+$lang['today_profit']                               = "Utilidad de hoy";

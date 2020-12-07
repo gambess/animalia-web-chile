@@ -12,9 +12,9 @@
         <title><?= $page_title; ?></title>
         <meta name="description" content="<?= $page_desc; ?>">
         <link rel="shortcut icon" href="<?= $assets; ?>images/favicon.png">
-        
-         
-        
+
+
+
 
         <link href="<?= $assets; ?>css/animate.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/slick.css" rel="stylesheet">
@@ -22,8 +22,8 @@
         <link href="<?= $assets; ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/default.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/style.css" rel="stylesheet">
-        
-        
+
+
 
 
         <meta property="og:url" content="<?= isset($product) && !empty($product) ? site_url('product/' . $product->slug) : site_url(); ?>" />
@@ -31,6 +31,12 @@
         <meta property="og:title" content="<?= $page_title; ?>" />
         <meta property="og:description" content="<?= $page_desc; ?>" />
         <meta property="og:image" content="<?= isset($product) && !empty($product) ? base_url('assets/uploads/' . $product->image) : base_url('assets/uploads/logos/' . $shop_settings->logo); ?>" />
+        <style>
+            .nav-link{
+                color: #178FD6 !important;
+                font-weight: bolder;
+            }
+        </style>
     </head>
     <body>
         <!--[if IE]>
