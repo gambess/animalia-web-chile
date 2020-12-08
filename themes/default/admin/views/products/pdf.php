@@ -81,12 +81,12 @@
                             <td><?= $unit->name.' ('.$unit->code.')'; ?></td>
                         </tr>
                         <?php if ($Owner || $Admin) {
-                            echo '<tr><td>' . lang("cost") . '</td><td>' . $this->sma->formatMoney($product->cost) . '</td></tr>';
+//                            echo '<tr><td>' . lang("cost") . '</td><td>' . $this->sma->formatMoney($product->cost) . '</td></tr>';
                             echo '<tr><td>' . lang("price") . '</td><td>' . $this->sma->formatMoney($product->price) . '</td></tr>';
                         } else {
-                            if ($this->session->userdata('show_cost')) {
-                                echo '<tr><td>' . lang("cost") . '</td><td>' . $this->sma->formatMoney($product->cost) . '</td></tr>';
-                            }
+//                            if ($this->session->userdata('show_cost')) {
+//                                echo '<tr><td>' . lang("cost") . '</td><td>' . $this->sma->formatMoney($product->cost) . '</td></tr>';
+//                            }
                             if ($this->session->userdata('show_price')) {
                                 echo '<tr><td>' . lang("price") . '</td><td>' . $this->sma->formatMoney($product->price) . '</td></tr>';
                             }
