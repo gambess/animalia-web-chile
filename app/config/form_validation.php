@@ -136,16 +136,6 @@ $config = array(
             'rules' => 'trim|required'
         ),
         array(
-            'field' => 'company',
-            'label' => lang('company'),
-            'rules' => 'trim|required'
-        ),
-        array(
-            'field' => 'email',
-            'label' => lang('email_address'),
-            'rules' => 'required|valid_email'
-        ),
-        array(
             'field' => 'address',
             'label' => lang('address'),
             'rules' => 'required'
