@@ -371,10 +371,10 @@ function row_status($x) {
                     </div>
 
                     <div class="col-lg-1 col-md-2 col-xs-6">
-                        <a class="blightOrange white quick-button small" href="<?= admin_url('quotes') ?>">
-                            <i class="fa fa-heart-o"></i>
+                        <a class="blightOrange white quick-button small" href="<?= admin_url('reports/quantity_alerts') ?>">
+                            <i class="fa fas fa-bell"></i>
 
-                            <p><?= lang('quotes') ?></p>
+                        <p><?= lang('product_quantity_alerts') ?></p>
                         </a>
                     </div>
 
