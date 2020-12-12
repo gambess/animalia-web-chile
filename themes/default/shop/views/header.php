@@ -36,6 +36,49 @@
                 color: #178FD6 !important;
                 font-weight: bolder;
             }
+            /*===========================
+            08.BRAND css 
+            ===========================*/
+            .brand-wrapper {
+                border-top: 1px solid #dedede; 
+            }
+            .brand-wrapper .single-brand {
+                float: left;
+                width: 20%;
+                text-align: center; 
+            }
+            @media (max-width: 767px) {
+                .brand-wrapper .single-brand {
+                    width: 50%; 
+                } 
+            }
+            
+            .tip {
+                position: relative;
+                background: #178FD6;
+                border-radius: 25px;
+                padding: 30px 25px;
+                z-index: 1;
+                margin-bottom: 25px;
+            }
+            .tip::after {
+                content: '';
+                position: absolute;
+                background-image: url(<?= $assets; ?>images/arrow.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom center;
+                width: 100px;
+                height: 54px;
+                bottom: -48px;
+                left: 18px;
+            }
+
+            .info {
+                display: flex;
+                align-items: center;
+                margin-left: 100px;
+            }
         </style>
     </head>
     <body>

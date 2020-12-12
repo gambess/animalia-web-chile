@@ -330,8 +330,6 @@
 </section>
 <br />
 <br />
-<br />
-<br />
 
 <section id="counter" class="counter_area pt-50 pb-95 bg_cover text-center" style="background-image: url(<?= $assets; ?>images/counter_bg.jpg)">
     <div class="container">
@@ -374,132 +372,80 @@
         <div class="row customer_active">
             <div class="col-lg-6">
                 <div class="single_customer d-sm-flex align-items-center mt-30">
-                    <div class="customer_image">
-                        <img src="<?= $assets; ?>images/customer-1.jpg" alt="customer">
-                    </div>
-                    <div class="customer_content media-body">
-                        <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Pamela L&oacute;pez</h5>
-                            <span class="sub_title">Dog Lover</span>
-                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
-                            <ul class="star">
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                            </ul>
+                    <div class="single-testimonial">
+                        <div class="single-testimonial">
+                            <div class="content-wrapper ">
+                                <div class="tip text-white">
+                                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
+                                    <div class="quote">
+                                        <i class="lni lni-quotation"></i>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="image">
+                                        <img src="<?= $assets; ?>images/testimonial-1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h5>Raz del Valle</h5>
+                                        <p>Experto Canina</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="single_customer d-sm-flex align-items-center mt-30">
+                    <div class="single-testimonial">
+                        <div class="single-testimonial">
+                            <div class="content-wrapper ">
+                                <div class="tip text-white">
+                                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
+                                    <div class="quote">
+                                        <i class="lni lni-quotation"></i>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="image">
+                                        <img src="<?= $assets; ?>images/testimonial-2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h5>Christiano Viedo</h5>
+                                        <p>Experto Canina</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div> 
             </div>
             <div class="col-lg-6">
                 <div class="single_customer d-sm-flex align-items-center mt-30">
-                    <div class="customer_image">
-                        <img src="<?= $assets; ?>images/customer-2.jpg" alt="customer">
-                    </div>
-                    <div class="customer_content media-body">
-                        <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Cristina Suarez</h5>
-                            <span class="sub_title">Cat Lover</span>
-                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
-                            <ul class="star">
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                            </ul>
+                    <div class="single-testimonial">
+                        <div class="single-testimonial">
+                            <div class="content-wrapper ">
+                                <div class="tip text-white">
+                                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
+                                    <div class="quote">
+                                        <i class="lni lni-quotation"></i>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="image">
+                                        <img src="<?= $assets; ?>images/testimonial-3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h5>Mili Petric</h5>
+                                        <p>Estilista Canina</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div> 
-            </div>
-            <div class="col-lg-6">
-                <div class="single_customer d-sm-flex align-items-center mt-30">
-                    <div class="customer_image">
-                        <img src="<?= $assets; ?>images/customer-3.jpg" alt="customer">
-                    </div>
-                    <div class="customer_content media-body">
-                        <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Juan y Ana</h5>
-                            <span class="sub_title">Cat Lovers</span>
-                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
-                            <ul class="star">
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <div class="col-lg-6">
-                <div class="single_customer d-sm-flex align-items-center mt-30">
-                    <div class="customer_image">
-                        <img src="<?= $assets; ?>images/customer-4.jpg" alt="customer">
-                    </div>
-                    <div class="customer_content media-body">
-                        <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Francisca S&aacute;nchez</h5>
-                            <span class="sub_title">Cat Lovers</span>
-                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
-                            <ul class="star">
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <div class="col-lg-6">
-                <div class="single_customer d-sm-flex align-items-center mt-30">
-                    <div class="customer_image">
-                        <img src="<?= $assets; ?>images/customer-5.jpg" alt="customer">
-                    </div>
-                    <div class="customer_content media-body">
-                        <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Familia Garcia</h5>
-                            <span class="sub_title">Dog Lovers</span>
-                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
-                            <ul class="star">
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <div class="col-lg-6">
-                <div class="single_customer d-sm-flex align-items-center mt-30">
-                    <div class="customer_image">
-                        <img src="<?= $assets; ?>images/customer-6.jpg" alt="customer">
-                    </div>
-                    <div class="customer_content media-body">
-                        <div class="customer_content_wrapper media-body">
-                            <h5 class="author_name">Isabela G&oacute;mez</h5>
-                            <span class="sub_title">Dog Lover</span>
-                            <p>Lorem ipsum dolor sit amdi scing elitr, sed diam nonumy eirmo tem invidunt ut labore etdolo magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
-                            <ul class="star">
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                                <li><i class="lni lni-star-filled"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-            </div>
+                    </div> 
+                </div>
+            </div> 
         </div> 
-    </div> 
 </section>
 
 <section id="upcoming" class="upcoming_area pt-120">
