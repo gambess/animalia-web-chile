@@ -194,6 +194,46 @@
 <script src="<?= $assets; ?>js/scrolling-nav.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/wow.min.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/main.js" type="text/javascript"></script>
+<script>
+            $(function () {
+                "use strict";
+                $('.client-active').slick({
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    autoplay: true,
+                    speed: 800,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 3,
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
 
 
 

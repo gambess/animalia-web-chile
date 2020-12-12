@@ -38,7 +38,7 @@
 
 <?php } ?>
 </section>
-<section id="coffee" class="coffee_area pt-120">
+<section id="client" class="customer_area pt-50 pb-95 bg_cover text-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -50,44 +50,35 @@
                 </div> 
             </div>
         </div> 
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-7 col-sm-9">
-                <div class="single_coffee text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                    <div class="coffee_image">
-                        <img src="<?= $assets; ?>images/express.jpg" alt="coffee">
-                    </div>
-                    <div class="coffee_content">
-                        <h4 class="coffee_title">Animalia Express</h4>
-                        <p>Av. Diego Portales 2202, abierto de 10hrs a 21hrs de Lunes a Domingo .</p>
-                    </div>
+        <div class="row client-active">
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <img src="<?= $assets; ?>images/brand-1.png" alt="Client">
                 </div> 
             </div>
-            <div class="col-lg-4 col-md-7 col-sm-9">
-                <div class="single_coffee text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <div class="coffee_image">
-                        <img src="<?= $assets; ?>images/azapa.jpg" alt="coffee">
-                    </div>
-                    <div class="coffee_content">
-                        <h4 class="coffee_title">Animalia Azapa</h4>
-                        <p>Calle Sofia SN km 3 1/2, abierto de 10hrs a 21hrs de Lunes a Domingo .</p>
-                    </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <img src="<?= $assets; ?>images/brand-2.png" alt="Client">
                 </div> 
             </div>
-            <div class="col-lg-4 col-md-7 col-sm-9">
-                <div class="single_coffee text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                    <div class="coffee_image">
-                        <img src="<?= $assets; ?>images/web.jpg" alt="coffee">
-                    </div>
-                    <div class="coffee_content">
-                        <h4 class="coffee_title">Animalia Web</h4>
-                        <p>Abierto 24 horas al día, los 7 dias de la semana durante todo el año.</p>
-                    </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <img src="<?= $assets; ?>images/brand-3.png" alt="Client">
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <img src="<?= $assets; ?>images/brand-4.png" alt="Client">
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <img src="<?= $assets; ?>images/brand-5.png" alt="Client">
                 </div> 
             </div>
         </div> 
     </div> 
 </section>
-
 
 <section id="about" class="about_area pt-120 pb-130">
     <div class="container">
@@ -95,6 +86,7 @@
             <div class="col-lg-12">
                 <div class="section_title text-center pb-10">
                     <h4 class="title">horarios y servicios</h4>
+                    <br />
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -153,7 +145,7 @@
     </div> 
     <div class="container">
         <div class="row gallery_active">
-            
+
             <div class="col-md-6 col-sm-12">
                 <div class="single_gallery mt-30">
                     <div class="gallery_image">
