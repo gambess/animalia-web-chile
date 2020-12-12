@@ -43,7 +43,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Ubicaciones</h4>
+                    <h4 class="title">marcas</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -92,35 +92,50 @@
 <section id="about" class="about_area pt-120 pb-130">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="section_title text-center pb-10">
-                    <h4 class="title">Animalia</h4>
+                    <h4 class="title">horarios y servicios</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
                 </div> 
-            </div>
-        </div> 
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="about_image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <img src="<?= $assets; ?>images/about.jpg" alt="about">
-                </div> 
-            </div>
-            <div class="col-lg-6">
                 <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                    <h4 class="about_title">Soluciones Veterinarias Integrales</h4>
+                    <h4 class="about_title">boutique</h4>
                     <p>Animalia, Express, Azapa, Animalia Web, Animalia Fono Pedido, Animalia Express, Animalia Azapa, Animalia Web. </p>
+                    <div class="d-flex flex-wrap">
+                        <div class="mt-45">
+                            <h4 class="footer_title">horarios de atención</h4>
+                            <ul>
+                                <li>Lunes - Viernes: 09.00 A.M - 09.00 P.M</li>
+                                <li>Sábados: 10.00 A.M - 08.00 P.M</li>
+                                <!--<li>Domingos: 10.00 A.M - 03.00 P.M</li>-->
+                                <!--                                <li>Half-Holidays: 08.00 A.M - 02.00 P.M</li>
+                                                                <li>Twe: 08.00 A.M - 02.00 P.M</li>-->
+                            </ul>
+                        </div> 
+                    </div>
                     <ul class="social">
                         <li><a href="https://www.facebook.com/Animalia-110563507299462"><i class="lni lni-facebook-filled"></i></a></li>
                         <!--<li><a href="#"><i class="lni lni-twitter-original"></i></a></li>-->
                         <li><a href="https://www.instagram.com/animalia_arica/"><i class="lni lni-instagram-original"></i></a></li>
                         <!--<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>-->
                     </ul>
+                </div>
+                <div class="mt-40">
+                    <h5 class="footer_title">direcci&oacute;n</h5>
+                    <p class="text">Av. Diego Portales 2202, Arica, Arica y Parinacota, Chile</p>
+                    <a class="contact-link" href="#">ventas@animaliaweb.cl</a>
                 </div> 
             </div>
         </div> 
-    </div> 
+    </div>
+    <br />
+    <br />
+    <div class="contact_map">
+        <div class="gmap_canvas">
+            <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.013239536126!2d-70.29651308510778!3d-18.483059487430825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa9cbd5497689%3A0xe7262007a2d38d6a!2sAv.%20Diego%20Portales%202202%2C%20Arica%2C%20Arica%20y%20Parinacota!5e0!3m2!1ses!2scl!4v1606509498884!5m2!1ses!2scl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+    </div>
 </section>
 
 <section id="gallery" class="gallery_area pt-120 pb-130">
@@ -128,7 +143,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Principales Categor&iacute;as</h4>
+                    <h4 class="title">especialidades</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -138,13 +153,14 @@
     </div> 
     <div class="container">
         <div class="row gallery_active">
+            
             <div class="col-md-6 col-sm-12">
                 <div class="single_gallery mt-30">
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-2.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-5.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Accesorios</h5>
+                        <h5 class="gallery_title">todo gatos</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -155,7 +171,7 @@
                         <img src="<?= $assets; ?>images/gallery-1.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Alimentos</h5>
+                        <h5 class="gallery_title">todo perros</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -163,10 +179,10 @@
             <div class="col-md-6 col-sm-12">
                 <div class="single_gallery mt-30">
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-3.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-2.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Arenas Sanitarias</h5>
+                        <h5 class="gallery_title">todo accesorios</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -177,7 +193,7 @@
                         <img src="<?= $assets; ?>images/gallery-4.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Enfermer&iacute;a</h5>
+                        <h5 class="gallery_title">todo cl&iacute;nica</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -185,10 +201,10 @@
             <div class="col-md-6 col-sm-12">
                 <div class="single_gallery mt-30">
                     <div class="gallery_image">
-                        <img src="<?= $assets; ?>images/gallery-5.jpg" alt="gallery">
+                        <img src="<?= $assets; ?>images/gallery-3.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Higiene</h5>
+                        <h5 class="gallery_title">todo arenas</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -199,7 +215,7 @@
                         <img src="<?= $assets; ?>images/gallery-6.jpg" alt="gallery">
                     </div>
                     <div class="gallery_content">
-                        <h5 class="gallery_title">Ofertas</h5>
+                        <h5 class="gallery_title">todo ofertas</h5>
                         <p>Lorem ipsum dolor sit amet, consets adipscing elitr, sed diam nonumy eirmod tempo invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero.</p>
                     </div>
                 </div> 
@@ -356,7 +372,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Comentarios</h4>
+                    <h4 class="title">siempre es bueno saber que...</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -499,7 +515,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">Pr&oacute;ximamente</h4>
+                    <h4 class="title">pr&oacute;ximamente</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -599,10 +615,5 @@
                 </div> 
             </form>
         </div> 
-    </div> 
-    <div class="contact_map">
-        <div class="gmap_canvas">
-            <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.013239536126!2d-70.29651308510778!3d-18.483059487430825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa9cbd5497689%3A0xe7262007a2d38d6a!2sAv.%20Diego%20Portales%202202%2C%20Arica%2C%20Arica%20y%20Parinacota!5e0!3m2!1ses!2scl!4v1606509498884!5m2!1ses!2scl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </div>
     </div> 
 </section>

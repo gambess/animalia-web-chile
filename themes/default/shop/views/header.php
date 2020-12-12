@@ -49,7 +49,7 @@
                         <div class="col-lg-12">
                             <nav class="navbar navbar-light bg-transparent">
                                 <a class="navbar-brand" href="index.html">
-                                    <img alt="<?= $shop_settings->shop_name; ?>" src="<?= base_url('assets/uploads/logos/' . $shop_settings->logo); ?>" class="img-responsive" />
+                                    <?= strtolower($shop_settings->shop_name) ; ?>
                                 </a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="toggler-icon"></span>
