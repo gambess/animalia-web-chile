@@ -53,27 +53,121 @@
         <div class="row client-active">
             <div class="col-lg-3">
                 <div class="single-client">
-                    <img src="<?= $assets; ?>images/brand-1.png" alt="Client">
+                    <a href="/brand/acana" alt="Acana">
+                        <img src="<?= $assets; ?>images/acana.png" alt="Client">
+                    </a>
                 </div> 
             </div>
             <div class="col-lg-3">
                 <div class="single-client">
-                    <img src="<?= $assets; ?>images/brand-2.png" alt="Client">
+                    <a href="/brand/animal-planet" alt="Animal Planet">
+                        <img src="<?= $assets; ?>images/animalplanet.png" alt="Client">
+                    </a>
                 </div> 
             </div>
             <div class="col-lg-3">
                 <div class="single-client">
-                    <img src="<?= $assets; ?>images/brand-3.png" alt="Client">
+                    <a href="/brand/animal-factory" alt="Animal Factory">
+                        <img src="<?= $assets; ?>images/animalfactory.png" alt="Client">
+                    </a>
+                </div> 
+            </div>            
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/bayer" alt="Bayer">
+                        <img src="<?= $assets; ?>images/bayer.png" alt="Client">
+                    </a>
                 </div> 
             </div>
             <div class="col-lg-3">
                 <div class="single-client">
-                    <img src="<?= $assets; ?>images/brand-4.png" alt="Client">
+                    <a href="/brand/beaphar" alt="Beaphar">
+                        <img src="<?= $assets; ?>images/beaphar.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+           <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/bil-jac" alt="Bil Jac">
+                        <img src="<?= $assets; ?>images/biljac.png" alt="Client">
+                    </a>
                 </div> 
             </div>
             <div class="col-lg-3">
                 <div class="single-client">
-                    <img src="<?= $assets; ?>images/brand-5.png" alt="Client">
+                    <a href="/brand/bravecto" alt="Bravecto">
+                        <img src="<?= $assets; ?>images/bravecto.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/brouwer" alt="Brouwer">
+                        <img src="<?= $assets; ?>images/brouwer.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/cat-chow" alt="Cat Chow">
+                        <img src="<?= $assets; ?>images/catchow.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/dog-buffet" alt="Dog Buffet">
+                        <img src="<?= $assets; ?>images/dogbuffet.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/doguito" alt="Doguito">
+                        <img src="<?= $assets; ?>images/doguitos.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/doko" alt="Doko">
+                        <img src="<?= $assets; ?>images/doko.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/eukanuba" alt="Eukanuba">
+                        <img src="<?= $assets; ?>images/eukanuba.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/felix" alt="Felix">
+                        <img src="<?= $assets; ?>images/felix.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/master-dog" alt="Master Dog">
+                        <img src="<?= $assets; ?>images/masterdog.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/topk9" alt="Topk9">
+                        <img src="<?= $assets; ?>images/topk9.png" alt="Client">
+                    </a>
+                </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="single-client">
+                    <a href="/brand/royal-canin" alt="Royal Canin">
+                        <img src="<?= $assets; ?>images/royalcanin.png" alt="Client">
+                    </a>
                 </div> 
             </div>
         </div> 
@@ -362,7 +456,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">siempre es bueno saber que...</h4>
+                    <h4 class="title">siempre es bueno saber...</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
