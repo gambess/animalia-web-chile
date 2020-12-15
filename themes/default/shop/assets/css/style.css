@@ -549,39 +549,14 @@ p {
     font-family: 'HuntingStarRegular', sans-serif;
     font-style: normal;
     font-weight: normal;
-    /*font-size: 13vw;*/
-    /*background-color: transparent;*/
-    /*                border-color: #178FD6;
-                    border-style: solid;
-                    margin: 100px 0 1px -5%;
-                    padding: 90px 0 2px -20%;*/
     color: #178FD6 !important;
-    /*                line-height: 3;
-                    vertical-align: text-bottom;*/
     margin-top: 15%;
     margin-right: auto!important;
-    /*                padding-top: 35px;*/
-    /*margin: 25px 0 5px 0 !important;*/
-    padding: 0;
 }
 
 a.navbar-brand{
     /*font metrics*/ 
     --font: HuntingStarRegular;
-    /*                --fm-capitalHeight: 0.005;
-                    --fm-descender: 0.54;
-                    --fm-ascender: 1.1;
-                    --fm-linegap: 0;*/
-
-    /*desired font-size for capital height*/ 
-    /*--capital-height: 0.97;*/
-
-    /*apply font-family*/ 
-    /*font-family: var(--font);*/
-
-    /*compute font-size to get capital height equal desired font-size*/ 
-    /*                --computedFontSize: (var(--capital-height) / var(--fm-capitalHeight));
-                    font-size: calc(var(--computedFontSize) * 1px);*/
     --fm-emSquare: 0.5;
     --fm-capitalHeight: 0.68;
     --fm-descender: 0.54;

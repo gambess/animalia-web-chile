@@ -194,6 +194,7 @@
 <script src="<?= $assets; ?>js/scrolling-nav.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/wow.min.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/main.js" type="text/javascript"></script>
+<script src="//kit.fontawesome.com/c882d3bb59.js" crossorigin="anonymous"></script>
 <script>
             $(function () {
                 "use strict";

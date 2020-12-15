@@ -13,18 +13,12 @@
         <meta name="description" content="<?= $page_desc; ?>">
         <link rel="shortcut icon" href="<?= $assets; ?>images/favicon.png">
 
-
-
-
         <link href="<?= $assets; ?>css/animate.css" rel="stylesheet">
-        <link href="<?= $assets; ?>css/slick.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/LineIcons.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?= $assets; ?>css/slick.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/default.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/style.css" rel="stylesheet">
-
-
-
 
         <meta property="og:url" content="<?= isset($product) && !empty($product) ? site_url('product/' . $product->slug) : site_url(); ?>" />
         <meta property="og:type" content="website" />
@@ -52,7 +46,7 @@
                     width: 50%; 
                 } 
             }
-            
+
             .tip {
                 position: relative;
                 background: #178FD6;
@@ -79,6 +73,158 @@
                 align-items: center;
                 margin-left: 100px;
             }
+
+            .login {
+                margin-bottom:5px;
+            }
+            .dropdown-menu {
+                width: 300px !important;
+            }
+
+            /*carousel styles*/
+            .carousel {
+                margin: 50px auto;
+                padding: 0 70px;
+            }
+            .carousel .carousel-item {
+                min-height: 330px;
+                text-align: center;
+                overflow: hidden;
+            }
+            .carousel .carousel-item .img-box {
+                height: 160px;
+                width: 100%;
+                position: relative;
+            }
+            .carousel .carousel-item img {	
+                max-width: 100%;
+                max-height: 100%;
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+            }
+            .carousel .carousel-item h4 {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+            .carousel .carousel-item .btn {
+                color: #333;
+                border-radius: 0;
+                font-size: 11px;
+                text-transform: uppercase;
+                font-weight: bold;
+                background: none;
+                border: 1px solid #ccc;
+                padding: 5px 10px;
+                margin-top: 5px;
+                line-height: 16px;
+            }
+            .carousel .carousel-item .btn:hover, .carousel .carousel-item .btn:focus {
+                color: #fff;
+                background: #000;
+                border-color: #000;
+                box-shadow: none;
+            }
+            .carousel .carousel-item .btn i {
+                font-size: 14px;
+                font-weight: bold;
+                margin-left: 5px;
+            }
+            .carousel .thumb-wrapper {
+                text-align: center;
+            }
+            .carousel .thumb-content {
+                padding: 15px;
+            }
+            .carousel-control-prev, .carousel-control-next {
+                height: 100px;
+                width: 40px;
+                background: none;
+                margin: auto 0;
+                background: rgba(0, 0, 0, 0.2);
+            }
+            .carousel-control-prev i, .carousel-control-next i {
+                font-size: 30px;
+                position: absolute;
+                top: 50%;
+                display: inline-block;
+                margin: -16px 0 0 0;
+                z-index: 5;
+                left: 0;
+                right: 0;
+                color: rgba(0, 0, 0, 0.8);
+                text-shadow: none;
+                font-weight: bold;
+            }
+            .carousel-control-prev i {
+                margin-left: -3px;
+            }
+            .carousel-control-next i {
+                margin-right: -3px;
+            }
+            .carousel .item-price {
+                font-size: 13px;
+                padding: 2px 0;
+                font-weight: bold;
+            }
+            .carousel .item-price strike {
+                color: #999;
+                margin-right: 5px;
+            }
+            .carousel .item-price span {
+                color: #000;
+                font-size: 100%;
+                font-family: sans-serif;
+            }	
+            .carousel .carousel-indicators {
+                bottom: -50px;
+            }
+            .carousel-indicators li, .carousel-indicators li.active {
+                width: 10px;
+                height: 10px;
+                margin: 4px;
+                border-radius: 50%;
+                border-color: transparent;
+                border: none;
+            }
+            .carousel-indicators li {	
+                background: rgba(0, 0, 0, 0.2);
+            }
+            .carousel-indicators li.active {	
+                background: rgba(0, 0, 0, 0.6);
+            }
+            .star-rating li {
+                padding: 0;
+            }
+            .star-rating i {
+                font-size: 14px;
+                color: #178FD6;
+            }
+
+            h5 > a {
+                text-decoration: none !important;
+                color: #000 !important;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+            div > a.link {
+                text-decoration: none !important;
+                font-weight: bold;
+            }
+
+            /*end slider styles*/
+
+            .custom-btn {
+                border-color: #178FD6 !important;
+            }
+            
+            .fa-shopping-cart{
+                color: #178FD6;
+            }
+
         </style>
     </head>
     <body>
@@ -92,7 +238,7 @@
                         <div class="col-lg-12">
                             <nav class="navbar navbar-light bg-transparent">
                                 <a class="navbar-brand" href="index.html">
-                                    <?= strtolower($shop_settings->shop_name) ; ?>
+                                    <?= strtolower($shop_settings->shop_name); ?>
                                 </a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="toggler-icon"></span>
@@ -249,7 +395,9 @@
                                         <li class=""><a class="page-scroll" href="#coffee">Ubicaciones</a></li>
                                         <li class=""><a class="page-scroll" href="#about">Nosotros</a></li>
                                         <li class=""><a class="page-scroll" href="#gallery">Categor&iacute;as</a></li>
+                                    <?php    if (!empty($featured_products)) {; ?>
                                         <li class=""><a class="page-scroll" href="#featured">Destacados</a></li>
+                                    <?php    } ?>
                                         <li class=""><a class="page-scroll" href="#upcoming">Pr&oacute;ximamente</a></li>
                                         <li class=""><a class="page-scroll" href="#contact">Cont&aacute;ctanos</a></li>
                                         <li class="dropdown-divider"></li>

@@ -86,7 +86,7 @@
                     </a>
                 </div> 
             </div>
-           <div class="col-lg-3">
+            <div class="col-lg-3">
                 <div class="single-client">
                     <a href="/brand/bil-jac" alt="Bil Jac">
                         <img src="<?= $assets; ?>images/biljac.png" alt="Client">
@@ -310,17 +310,19 @@
     </div> 
 </section>
 
+<?php    if (!empty($featured_products)) {; ?>
+
 <section id="featured" class="customer_area pt-120">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title"><?= lang('featured_products'); ?></h4>
+                    <h4 class="title"><?= strtolower(lang('featured_products')); ?></h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
                 </div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Carousel indicators -->
                     <!--                    <ol class="carousel-indicators">
                                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -350,9 +352,24 @@
                                                 <div class="img-box">
                                                     <img src="<?= base_url('assets/uploads/' . $fp->image); ?>" class="img-fluid" alt="">
                                                 </div>
-                                                <br />
                                                 <div class="thumb-content">
                                                     <h5><a href="<?= site_url('product/' . $fp->slug); ?>"><?= $fp->name; ?></a></h5>
+                                                    <?php
+                                                    if ($fp->brand_name) {
+                                                        ?>
+                                                        <a href="<?= site_url('brand/' . $fp->brand_slug); ?>" class="link"><?= $fp->brand_name; ?></a>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                    <div class="star-rating text-center">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
                                                     <?php if (!$shop_settings->hide_price) { ?>
                                                         <p class="item-price">
                                                             <?php
@@ -365,29 +382,11 @@
                                                             ?>
                                                         </p>
                                                     <?php } ?>
-                                                    <a href="<?= site_url('category/' . $fp->category_slug); ?>" class="link"><?= $fp->category_name; ?></a>
-                                                    <?php
-                                                    if ($fp->brand_name) {
-                                                        ?>
-                                                        <span class="link">-</span>
-                                                        <a href="<?= site_url('brand/' . $fp->brand_slug); ?>" class="link"><?= $fp->brand_name; ?></a>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                    <br />
-                                                    <div class="star-rating text-center">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <br />
+
+
                                                     <?php if (!$shop_settings->hide_price) { ?>
-                                                        <div class="text-center">                                                        
-                                                            <a href="#" data-id="<?= $fp->id; ?>" class="btn btn-primary center-block"><i class="fa fa-shopping-cart"></i> <?= lang('add_to_cart'); ?></a>                                                    
+                                                        <div class="justify-content-center">                                                        
+                                                            <a href="#" data-id="<?= $fp->id; ?>" class="btn custom-btn" alt=" <?= lang('add_to_cart'); ?>" title=" <?= lang('add_to_cart'); ?>"><i class="fa fa-shopping-cart"></i></a>                                                    
                                                         </div>
                                                     <?php } ?>
                                                 </div>
@@ -407,21 +406,23 @@
                     if (count($featured_products) > 4) {
                         ?>
                         <!-- Carousel controls -->
-                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only"><i class="fa fa-angle-left"></i></span>
                         </a>
-                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only"><i class="fa fa-angle-right"></i></span>
                         </a>
                         <?php
                     }
                     ?>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
+<?php } ?>
 <br />
 <br />
 
@@ -456,7 +457,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section_title text-center pb-30">
-                    <h4 class="title">siempre es bueno saber...</h4>
+                    <h4 class="title"><i class="lni lni-bulb"></i> ¿ sabias qu&eacute;... ?</h4>
                     <span class="line">
                         <span class="box"></span>
                     </span>
@@ -609,7 +610,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-30">
-                        <h4 class="title">Contáctanos</h4>
+                        <h4 class="title">contáctanos</h4>
                         <span class="line">
                             <span class="box"></span>
                         </span>
