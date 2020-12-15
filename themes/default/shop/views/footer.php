@@ -153,8 +153,19 @@
     lang.out_of_stock = '<?= lang('out_of_stock'); ?>';
     lang.x_product = '<?= lang('x_product'); ?>';
 </script>
-<script src="<?= $assets; ?>js/libs.min.js"></script>
-<script src="<?= $assets; ?>js/scripts.min.js"></script>
+
+<script src="<?= $assets; ?>js/jquery.js"></script>
+<script src="<?= $assets; ?>js/lib.js"></script>
+<script src="<?= $assets; ?>js/sticky.js"></script>
+<script src="<?= $assets; ?>js/rrss-buttons.js"></script>
+<script src="<?= $assets; ?>js/accounting.js"></script>
+<script src="<?= $assets; ?>js/bootstrap.3.3.7.js"></script>
+<script src="<?= $assets; ?>js/bootstrap-select.1.11.2.js"></script>
+<script src="<?= $assets; ?>js/custom-form-validation.js"></script>
+<script src="<?= $assets; ?>js/form-validation.js"></script>
+
+<script src="<?= $assets; ?>js/scripts.js"></script>
+
 <?php if ($m == 'shop' && $v == 'product') { ?>
 <script type="text/javascript">
 $(document).ready(function ($) {
