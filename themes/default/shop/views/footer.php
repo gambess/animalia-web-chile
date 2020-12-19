@@ -186,11 +186,10 @@
 </script>
 <script src="<?= $assets; ?>js/vendor/jquery-3.5.1.min.js"></script>
 <script src="<?= $assets; ?>js/vendor/modernizr-3.7.1.min.js"></script>
-<script src="<?= $assets; ?>js/popper.min.js" ></script>
-<script src="<?= $assets; ?>js/bootstrap.min.js"></script>
+<script src="<?= $assets; ?>js/bootstrap.bundle.min.js"></script>
 <script src="<?= $assets; ?>js/slick.min.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/ajax-contact.js" type="text/javascript"></script>
-<script src="<?= $assets; ?>js/jquery.easing.min.js" type="text/javascript"></script>
+<script src="<?= $assets; ?>js/jquery-easing.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/scrolling-nav.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/wow.min.js" type="text/javascript"></script>
 <script src="<?= $assets; ?>js/main.js" type="text/javascript"></script>

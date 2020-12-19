@@ -13,7 +13,7 @@
         <meta name="description" content="<?= $page_desc; ?>">
         <link rel="shortcut icon" href="<?= $assets; ?>images/favicon.png">
 
-        <link href="<?= $assets; ?>css/animate.css" rel="stylesheet">
+        <link href="<?= $assets; ?>css/animate.min.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/LineIcons.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= $assets; ?>css/slick.css" rel="stylesheet">
@@ -28,7 +28,6 @@
         <style>
             .nav-link{
                 color: #178FD6 !important;
-                font-weight: bolder;
             }
             /*===========================
             08.BRAND css 
@@ -144,7 +143,7 @@
                 width: 40px;
                 background: none;
                 margin: auto 0;
-                background: rgba(0, 0, 0, 0.2);
+                background: #178FD6;
             }
             .carousel-control-prev i, .carousel-control-next i {
                 font-size: 30px;
@@ -155,7 +154,7 @@
                 z-index: 5;
                 left: 0;
                 right: 0;
-                color: rgba(0, 0, 0, 0.8);
+                color: rgba(23, 143, 214, 0.9);
                 text-shadow: none;
                 font-weight: bold;
             }
@@ -204,7 +203,7 @@
                 color: #178FD6;
             }
 
-            h5 > a {
+            h6 > a {
                 text-decoration: none !important;
                 color: #000 !important;
                 font-family: sans-serif;
@@ -213,6 +212,8 @@
             div > a.link {
                 text-decoration: none !important;
                 font-weight: bold;
+                /*color: #198754;//Verde*/
+                color: #E54E1B; /*//NAranja*/
             }
 
             /*end slider styles*/
@@ -220,7 +221,7 @@
             .custom-btn {
                 border-color: #178FD6 !important;
             }
-            
+
             .fa-shopping-cart{
                 color: #178FD6;
             }
@@ -232,197 +233,209 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
           <![endif]-->
         <section class="header_area">
-            <div class="header_navbar">
+            <div class="header_navbar  bg-transparent">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <nav class="navbar navbar-light bg-transparent">
-                                <a class="navbar-brand" href="index.html">
-                                    <?= strtolower($shop_settings->shop_name); ?>
-                                </a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="toggler-icon"></span>
-                                    <span class="toggler-icon"></span>
-                                    <span class="toggler-icon"></span>
-                                </button>
-
-                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                    <ul class="navbar-nav">
+                            <nav class="navbar">
+                                <div class="container-fluid ">
+                                    <a class="navbar-brand" href="index.html">
+                                        <?= strtolower($shop_settings->shop_name); ?>
+                                    </a>
+                                    <div class="nav-item nav-link dropdown ml-auto mr-1">
                                         <?php
                                         if ($loggedIn) {
                                             ?>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                                    <?= lang('hi') . ' ' . $loggedInUser->first_name; ?> <span class="caret"></span>
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                    <li class="divider"></li>
-                                                    <?= $loggedIn && $Staff ? '<li class="hidden-xs"><a href="' . admin_url() . '"><i class="fa fa-dashboard"></i> ' . lang('admin_area') . '</a></li>' : ''; ?>
-                                                    <li class="divider"></li>
-                                                    <li class=""><a href="<?= site_url('profile'); ?>"><i class="mi fa fa-user"></i> <?= lang('profile'); ?></a></li>
-                                                    <li class=""><a href="<?= shop_url('orders'); ?>"><i class="mi fa fa-heart"></i> <?= lang('orders'); ?></a></li>
-                                                    <li class=""><a href="<?= shop_url('quotes'); ?>"><i class="mi fa fa-heart-o"></i> <?= lang('quotes'); ?></a></li>
-                                                    <?php if (!$shop_settings->hide_price) { ?>
-                                                        <li class="hidden-xs"><a href="<?= shop_url('wishlist'); ?>"><i class="fa fa-heart"></i> <?= lang('wishlist'); ?> (<span id="total-wishlist"><?= $wishlist; ?></span>)</a></li>
-                                                    <?php } ?>
-                                                    <li class=""><a href="<?= shop_url('downloads'); ?>"><i class="mi fa fa-download"></i> <?= lang('downloads'); ?></a></li>
-                                                    <li class=""><a href="<?= shop_url('addresses'); ?>"><i class="mi fa fa-building"></i> <?= lang('addresses'); ?></a></li>
-                                                    <li class="divider"></li>
-                                                    <li class=""><a href="<?= site_url('logout'); ?>"><i class="mi fa fa-sign-out"></i> <?= lang('logout'); ?></a></li>
-                                                </ul>
-                                            </li>
+                                            <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                                <i class="fa fa-user"></i> <?= lang('hi') . ' ' . $loggedInUser->first_name; ?> 
+                                            </a>
+                                            <div class="dropdown-menu dropdown-toggle-split dropdown-menu-login">
+                                                <?= $loggedIn && $Staff ? '<a class="nav-link" href="' . admin_url() . '"><i class="fa fa-dashboard"></i> ' . lang('admin_area') . '</a>' : ''; ?>
+                                                <a class="nav-link" href="<?= site_url('profile'); ?>"><i class="mi fa fa-user"></i> <?= lang('profile'); ?></a>
+                                                <a class="nav-link" href="<?= shop_url('orders'); ?>"><i class="mi fa fa-heart"></i> <?= lang('orders'); ?></a>
+                                                <a class="nav-link" href="<?= shop_url('addresses'); ?>"><i class="mi fa fa-building"></i> <?= lang('addresses'); ?></a>
+                                                <a class="nav-link" href="<?= site_url('logout'); ?>"><i class="mi fa fa-sign-out"></i> <?= lang('logout'); ?></a>
+                                            </div>
+
                                             <?php
                                         } else {
                                             ?>
-                                            <li>
-                                                <div class="dropdown">
-                                                    <a href="#" class="dropdown-toggle" id="dropdownLogin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                        <i class="fa fa-sign-in"></i> <?= lang('login'); ?> <span class="caret"></span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-login" aria-labelledby="dropdownLogin" data-dropdown-in="zoomIn" data-dropdown-out="fadeOut">
-                                                        <?php include FCPATH . 'themes' . DIRECTORY_SEPARATOR . $Settings->theme . DIRECTORY_SEPARATOR . 'shop' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'login_form.php'; ?>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            <a href="#" class="dropdown-toggle nav-link" id="dropdownLogin" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa fa-sign-in"></i> <i class="fa fa-user-lock"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-toggle-split dropdown-menu-login" aria-labelledby="dropdownLogin" data-dropdown-in="zoomIn" data-dropdown-out="fadeOut">
+                                                <?php include FCPATH . 'themes' . DIRECTORY_SEPARATOR . $Settings->theme . DIRECTORY_SEPARATOR . 'shop' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'login_form.php'; ?>
+                                            </div>
                                             <?php
                                         }
                                         ?>
-                                        <li class="dropdown-divider"></li>
-                                        <?php if ($isPromo) { ?>
-                                            <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') == 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products?promo=yes'); ?>"><?= lang('promotions'); ?></a>
+                                    </div>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="toggler-icon"></span>
+                                        <span class="toggler-icon"></span>
+                                        <span class="toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto nav-item nav-link">
+                                            <li aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item active" aria-current="page"><a href="#home"><i class="fa fa-house-user"></i> <?= lang('home'); ?></a></li>
+                                                </ol>
                                             </li>
-                                        <?php } ?>
-                                        <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') != 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                                <?= lang('categories'); ?> <span class="caret"></span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <?php
-                                                foreach ($categories as $pc) {
-                                                    echo '<li class="' . ($pc->subcategories ? 'dropdown dropdown-submenu' : '') . '">';
-                                                    echo '<a ' . ($pc->subcategories ? 'class="dropdown-toggle" data-toggle="dropdown"' : '') . ' href="' . site_url('category/' . $pc->slug) . '">' . $pc->name . '</a>';
-                                                    if ($pc->subcategories) {
-                                                        echo '<ul class="dropdown-menu">';
-                                                        foreach ($pc->subcategories as $sc) {
-                                                            echo '<li><a href="' . site_url('category/' . $pc->slug . '/' . $sc->slug) . '">' . $sc->name . '</a></li>';
-                                                        }
-                                                        echo '<li class="divider"></li>';
-                                                        echo '<li><a href="' . site_url('category/' . $pc->slug) . '">' . lang('all_products') . '</a></li>';
-                                                        echo '</ul>';
-                                                    }
-                                                    echo '</li>';
-                                                }
-                                                ?>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown<?= (count($brands) > 20) ? ' mega-menu' : ''; ?>">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                                <?= lang('brands'); ?> <span class="caret"></span>
-                                            </a>
-                                            <?php
-                                            if (count($brands) <= 10) {
-                                                ?>
+                                            <li class="dropdown-divider"></li>
+                                            <?php if ($isPromo) { ?>
+                                                <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') == 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products?promo=yes'); ?>"><?= lang('promotions'); ?></a>
+                                                </li>
+                                            <?php } ?>
+                                            <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') != 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products'); ?>"><i class="fa fa-barcode"></i> <?= lang('products'); ?></a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                                    <i class="fa fa-tags"></i> <?= lang('categories'); ?>
+                                                </a>
                                                 <ul class="dropdown-menu">
                                                     <?php
-                                                    foreach ($brands as $brand) {
-                                                        echo '<li><a href="' . site_url('brand/' . $brand->slug) . '" class="line-height-lg">' . $brand->name . '</a></li>';
+                                                    foreach ($categories as $pc) {
+                                                        echo '<li class="' . ($pc->subcategories ? 'dropdown dropdown-submenu' : '') . '">';
+                                                        echo '<a ' . ($pc->subcategories ? 'class="dropdown-toggle" data-bs-toggle="dropdown"' : '') . ' href="' . site_url('category/' . $pc->slug) . '"><i class="fa fa-tag"></i> ' . $pc->name . '</a>';
+                                                        if ($pc->subcategories) {
+                                                            echo '<ul class="dropdown-menu dropdown-toggle-split">';
+                                                            foreach ($pc->subcategories as $sc) {
+                                                                echo '<li><a href="' . site_url('category/' . $pc->slug . '/' . $sc->slug) . '">' . $sc->name . '</a></li>';
+                                                            }
+                                                            echo '<li class="divider"></li>';
+                                                            echo '<li><a href="' . site_url('category/' . $pc->slug) . '">' . lang('all_products') . '</a></li>';
+                                                            echo '</ul>';
+                                                        }
+                                                        echo '</li>';
                                                     }
                                                     ?>
                                                 </ul>
+                                            </li>
+                                            <li class="dropdown<?= (count($brands) > 20) ? ' mega-menu' : ''; ?>">
+                                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa fa-ticket-alt"></i> <?= lang('brands'); ?>
+                                                </a>
                                                 <?php
-                                            } elseif (count($brands) <= 20) {
-                                                ?>
-                                                <div class="dropdown-menu dropdown-menu-2x">
-                                                    <div class="dropdown-menu-content">
+                                                if (count($brands) <= 10) {
+                                                    ?>
+                                                    <ul class="dropdown-menu">
                                                         <?php
-                                                        $brands_chunks = array_chunk($brands, 10);
-                                                        foreach ($brands_chunks as $brands) {
-                                                            ?>
-                                                            <div class="col-xs-6 padding-x-no line-height-md">
-                                                                <ul class="nav">
-                                                                    <?php
-                                                                    foreach ($brands as $brand) {
-                                                                        echo '<li><a href="' . site_url('brand/' . $brand->slug) . '" class="line-height-lg">' . $brand->name . '</a></li>';
-                                                                    }
-                                                                    ?>
-                                                                </ul>
-                                                            </div>
-                                                            <?php
+                                                        foreach ($brands as $brand) {
+                                                            echo '<li><a href="' . site_url('brand/' . $brand->slug) . '" class="line-height-lg">' . $brand->name . '</a></li>';
                                                         }
                                                         ?>
-                                                    </div>
-                                                </div>
-                                                <?php
-                                            } elseif (count($brands) > 20) {
-                                                ?>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <div class="mega-menu-content">
-                                                            <div class="row">
-                                                                <?php
-                                                                $brands_chunks = array_chunk($brands, ceil(count($brands) / 4));
-                                                                foreach ($brands_chunks as $brands) {
-                                                                    ?>
-                                                                    <div class="col-sm-3">
-                                                                        <ul class="list-unstyled">
-                                                                            <?php
-                                                                            foreach ($brands as $brand) {
-                                                                                echo '<li><a href="' . site_url('brand/' . $brand->slug) . '" class="line-height-lg">' . $brand->name . '</a></li>';
-                                                                            }
-                                                                            ?>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <?php
-                                                                }
+                                                    </ul>
+                                                    <?php
+                                                } elseif (count($brands) <= 20) {
+                                                    ?>
+                                                    <div class="dropdown-menu dropdown-menu-2x">
+                                                        <div class="dropdown-menu-content">
+                                                            <?php
+                                                            $brands_chunks = array_chunk($brands, 10);
+                                                            foreach ($brands_chunks as $brands) {
                                                                 ?>
-                                                            </div>
+                                                                <div class="col-xs-6 padding-x-no line-height-md">
+                                                                    <ul class="nav">
+                                                                        <?php
+                                                                        foreach ($brands as $brand) {
+                                                                            echo '<li><a href="' . site_url('brand/' . $brand->slug) . '" class="line-height-lg">' . $brand->name . '</a></li>';
+                                                                        }
+                                                                        ?>
+                                                                    </ul>
+                                                                </div>
+                                                                <?php
+                                                            }
+                                                            ?>
                                                         </div>
-                                                    </li>
-                                                </ul>
-                                                <?php
+                                                    </div>
+                                                    <?php
+                                                } elseif (count($brands) > 20) {
+                                                    ?>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <div class="mega-menu-content">
+                                                                <div class="row">
+                                                                    <?php
+                                                                    $brands_chunks = array_chunk($brands, ceil(count($brands) / 4));
+                                                                    foreach ($brands_chunks as $brands) {
+                                                                        ?>
+                                                                        <div class="col-sm-3">
+                                                                            <ul class="list-unstyled">
+                                                                                <?php
+                                                                                foreach ($brands as $brand) {
+                                                                                    echo '<li><a href="' . site_url('brand/' . $brand->slug) . '" class="line-height-lg">' . $brand->name . '</a></li>';
+                                                                                }
+                                                                                ?>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <?php
+                                                                    }
+                                                                    ?>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </li>
+                                            <?php if (!$shop_settings->hide_price) { ?>
+                                                <li class="<?= $m == 'cart_ajax' && $v == 'index' ? 'active' : ''; ?>"><a href="<?= site_url('cart'); ?>"><i class="fa fa-shopping-cart"></i> <?= lang('shopping_cart'); ?></a></li>
+                                                <li class="<?= $m == 'cart_ajax' && $v == 'checout' ? 'active' : ''; ?>"><a href="<?= site_url('cart/checkout'); ?>"><i class="fa fa-money-check"></i> <?= lang('checkout'); ?></a></li>
+                                            <?php } ?>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="">
+                                                <a class="page-scroll" href="#client"><i class="fa fa-ticket-alt"></i> marcas</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="page-scroll" href="#about"><i class="fa fa-calendar-alt"></i> horarios y servicios</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="page-scroll" href="#gallery"><i class="fa fa-gift"></i> especialidades</a>
+                                            </li>
+                                            <?php
+                                            if (!empty($featured_products)) {
+                                                ;
+                                                ?>
+                                                <li class="">
+                                                    <a class="page-scroll" href="#featured"><i class="fa fa-medkit"></i> prescripci&oacute;n</a>
+                                                </li>
+                                            <?php } ?>
+                                            <li class="">
+                                                <a class="page-scroll" href="#customer"><i class="fab fa-medapps"></i> ¿sab&iacute;as qu&eacute;?</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="page-scroll" href="#upcoming"><i class="fa fa-shipping-fast"></i> pr&oacute;ximamente</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="page-scroll" href="#contact"><i class="fa fa-bullhorn"></i> cont&aacute;ctanos</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="page-scroll" href="#footer"><i class="fa fa-list-alt"></i> informaci&oacute;n</a>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <?php
+                                            if (!empty($pages)) {
+                                                foreach ($pages as $page) {
+                                                    echo '<li class=""><a href="' . site_url('page/' . $page->slug) . '">' . $page->name . '</a></li>';
+                                                }
                                             }
                                             ?>
-                                        </li>
-                                        <?php if (!$shop_settings->hide_price) { ?>
-                                            <li class="<?= $m == 'cart_ajax' && $v == 'index' ? 'active' : ''; ?>"><a href="<?= site_url('cart'); ?>"><?= lang('shopping_cart'); ?></a></li>
-                                            <li class="<?= $m == 'cart_ajax' && $v == 'checout' ? 'active' : ''; ?>"><a href="<?= site_url('cart/checkout'); ?>"><?= lang('checkout'); ?></a></li>
-                                        <?php } ?>
-                                        <li class="dropdown-divider"></li>
-                                        <li class=""><a class="page-scroll" href="#home"><?= lang('home'); ?></a></li>
-                                        <li class=""><a class="page-scroll" href="#coffee">Ubicaciones</a></li>
-                                        <li class=""><a class="page-scroll" href="#about">Nosotros</a></li>
-                                        <li class=""><a class="page-scroll" href="#gallery">Categor&iacute;as</a></li>
-                                    <?php    if (!empty($featured_products)) {; ?>
-                                        <li class=""><a class="page-scroll" href="#featured">Destacados</a></li>
-                                    <?php    } ?>
-                                        <li class=""><a class="page-scroll" href="#upcoming">Pr&oacute;ximamente</a></li>
-                                        <li class=""><a class="page-scroll" href="#contact">Cont&aacute;ctanos</a></li>
-                                        <li class="dropdown-divider"></li>
-                                        <?php
-                                        if (!empty($pages)) {
-                                            foreach ($pages as $page) {
-                                                echo '<li class=""><a href="' . site_url('page/' . $page->slug) . '">' . $page->name . '</a></li>';
-                                            }
-                                        }
-                                        ?>
-                                        <!--                <form class="form-inline my-2 my-lg-0">
-                                                            <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search">
-                                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                                        </form>-->
-                                    </ul>
-                                    <div class="dropdown-divider"></div>
-                                    <div class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
-                                        <?= shop_form_open('products', 'id="product-search-form"'); ?>
-                                        <div class="input-group">
-                                            <input name="query" type="text" class="form-control" id="product-search" aria-label="Buscar Productos..." placeholder="Buscar Productos...">
-                                            <div class="input-group-btn">
-                                                <button type="submit" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
+
+                                        </ul>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="<?= (!$shop_settings->hide_price) ? 'col-sm-8 col-md-6 col-md-offset-3' : 'col-md-6 col-md-offset-6'; ?> search-box">
+                                            <?= shop_form_open('products', 'id="product-search-form"'); ?>
+                                            <div class="input-group">
+                                                <input name="query" type="text" class="form-control" id="product-search" aria-label="Buscar Productos..." placeholder="Buscar Productos...">
+                                                <div class="input-group-btn">
+                                                    <button type="submit" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
+                                                </div>
                                             </div>
+                                            <?= form_close(); ?>
                                         </div>
-                                        <?= form_close(); ?>
                                     </div>
                                 </div>
                             </nav> 

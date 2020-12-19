@@ -38,7 +38,7 @@
 
 <?php } ?>
 </section>
-<section id="client" class="customer_area pt-50 pb-95 bg_cover text-center">
+<section id="client" class="customer_area pt-20 pb-95 bg_cover text-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -310,118 +310,118 @@
     </div> 
 </section>
 
-<?php    if (!empty($featured_products)) {; ?>
-
-<section id="featured" class="customer_area pt-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section_title text-center pb-30">
-                    <h4 class="title"><?= strtolower(lang('featured_products')); ?></h4>
-                    <span class="line">
-                        <span class="box"></span>
-                    </span>
-                </div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Carousel indicators -->
-                    <!--                    <ol class="carousel-indicators">
-                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                                        </ol>   -->
-                    <!-- Wrapper for carousel items -->
-                    <div class="carousel-inner">
-                        <?php
-                        $r = 0;
-                        foreach (array_chunk($featured_products, 4) as $fps) {
-                            ?>
-                            <div class="carousel-item <?= empty($r) ? 'active' : ''; ?>">
-                                <div class="row">
-                                    <?php
-                                    foreach ($fps as $fp) {
-                                        ?>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-                                                <?php
-                                                if ($fp->promotion) {
-                                                    ?>
-                                                    <span class="badge badge-right theme"><?= lang('promo'); ?></span>
+<?php if (!empty($featured_products)) { ?>
+    <section id="featured" class="customer_area pt-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section_title text-center pb-30">
+                        <h4 class="title"><?= strtolower(lang('featured_products')); ?></h4>
+                        <span class="line">
+                            <span class="box"></span>
+                        </span>
+                    </div>
+                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <!--                    <ol class="carousel-indicators">
+                                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                            </ol>   -->
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <?php
+                            $r = 0;
+                            foreach (array_chunk($featured_products, 4) as $fps) {
+                                ?>
+                                <div class="carousel-item <?= empty($r) ? 'active' : ''; ?>">
+                                    <div class="row">
+                                        <?php
+                                        foreach ($fps as $fp) {
+                                            ?>
+                                            <div class="col-sm-3">
+                                                <div class="thumb-wrapper">
+                                                    <a href="<?= site_url('category/' . $fp->category_slug); ?>" class="link"><?= $fp->category_name; ?></a>
                                                     <?php
-                                                }
-                                                ?>
-                                                <div class="img-box">
-                                                    <img src="<?= base_url('assets/uploads/' . $fp->image); ?>" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h5><a href="<?= site_url('product/' . $fp->slug); ?>"><?= $fp->name; ?></a></h5>
-                                                    <?php
-                                                    if ($fp->brand_name) {
+                                                    if ($fp->promotion) {
                                                         ?>
-                                                        <a href="<?= site_url('brand/' . $fp->brand_slug); ?>" class="link"><?= $fp->brand_name; ?></a>
+                                                        <span class="badge badge-right theme"><?= lang('promo'); ?></span>
                                                         <?php
                                                     }
                                                     ?>
-                                                    <div class="star-rating text-center">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        </ul>
+                                                    <div class="img-box">
+                                                        <img src="<?= base_url('assets/uploads/' . $fp->image); ?>" class="img-fluid" alt="">
                                                     </div>
-                                                    <?php if (!$shop_settings->hide_price) { ?>
-                                                        <p class="item-price">
-                                                            <?php
-                                                            echo '<!--<strike>$400.00</strike>-->';
-                                                            if ($fp->promotion) {
-                                                                echo '<span>' . $this->sma->convertMoney($fp->promo_price) . '</span><br>';
-                                                            } else {
-                                                                echo '<span>' . $this->sma->convertMoney(isset($fp->special_price) && !empty(isset($fp->special_price)) ? $fp->special_price : $fp->price) . '</span><br>';
-                                                            }
+                                                    <div class="thumb-content">
+                                                        <h6><a href="<?= site_url('product/' . $fp->slug); ?>"><?= $fp->name; ?></a></h6>
+                                                        <?php
+                                                        if ($fp->brand_name) {
                                                             ?>
-                                                        </p>
-                                                    <?php } ?>
-
-
-                                                    <?php if (!$shop_settings->hide_price) { ?>
-                                                        <div class="justify-content-center">                                                        
-                                                            <a href="#" data-id="<?= $fp->id; ?>" class="btn custom-btn" alt=" <?= lang('add_to_cart'); ?>" title=" <?= lang('add_to_cart'); ?>"><i class="fa fa-shopping-cart"></i></a>                                                    
+                                                            <a href="<?= site_url('brand/' . $fp->brand_slug); ?>" class="link"><?= $fp->brand_name; ?></a>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                        <div class="star-rating text-center">
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            </ul>
                                                         </div>
-                                                    <?php } ?>
+                                                        <?php if (!$shop_settings->hide_price) { ?>
+                                                            <p class="item-price">
+                                                                <?php
+                                                                echo '<!--<strike>$400.00</strike>-->';
+                                                                if ($fp->promotion) {
+                                                                    echo '<span>' . $this->sma->convertMoney($fp->promo_price) . '</span><br>';
+                                                                } else {
+                                                                    echo '<span>' . $this->sma->convertMoney(isset($fp->special_price) && !empty(isset($fp->special_price)) ? $fp->special_price : $fp->price) . '</span><br>';
+                                                                }
+                                                                ?>
+                                                            </p>
+                                                        <?php } ?>
+
+
+                                                        <?php if (!$shop_settings->hide_price) { ?>
+                                                            <div class="justify-content-center">                                                        
+                                                                <a href="#" data-id="<?= $fp->id; ?>" class="btn custom-btn" alt=" <?= lang('add_to_cart'); ?>" title=" <?= lang('add_to_cart'); ?>"><i class="fa fa-cart-plus"></i></a>                                                    
+                                                            </div>
+                                                        <?php } ?>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <?php
-                                    }
-                                    ?>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
-                            </div>
+                                <?php
+                                $r++;
+                            }
+                            ?>
+                        </div>
+                        <?php
+                        if (count($featured_products) > 4) {
+                            ?>
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only"><i class="fa fa-angle-double-left"></i></span>
+                            </a>
+                            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only"><i class="fa fa-angle-double-right"></i></span>
+                            </a>
                             <?php
-                            $r++;
                         }
                         ?>
                     </div>
-                    <?php
-                    if (count($featured_products) > 4) {
-                        ?>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only"><i class="fa fa-angle-left"></i></span>
-                        </a>
-                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only"><i class="fa fa-angle-right"></i></span>
-                        </a>
-                        <?php
-                    }
-                    ?>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php } ?>
 <br />
 <br />
@@ -468,22 +468,20 @@
             <div class="col-lg-6">
                 <div class="single_customer d-sm-flex align-items-center mt-30">
                     <div class="single-testimonial">
-                        <div class="single-testimonial">
-                            <div class="content-wrapper ">
-                                <div class="tip text-white">
-                                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
-                                    <div class="quote">
-                                        <i class="lni lni-quotation"></i>
-                                    </div>
+                        <div class="content-wrapper ">
+                            <div class="tip text-white">
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
+                                <div class="quote">
+                                    <i class="lni lni-quotation"></i>
                                 </div>
-                                <div class="info">
-                                    <div class="image">
-                                        <img src="<?= $assets; ?>images/testimonial-1.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h5>Raz del Valle</h5>
-                                        <p>Experto Canina</p>
-                                    </div>
+                            </div>
+                            <div class="info">
+                                <div class="image">
+                                    <img src="<?= $assets; ?>images/testimonial-1.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h5>Raz del Valle</h5>
+                                    <p>Experto Canina</p>
                                 </div>
                             </div>
                         </div>
@@ -493,22 +491,20 @@
             <div class="col-lg-6">
                 <div class="single_customer d-sm-flex align-items-center mt-30">
                     <div class="single-testimonial">
-                        <div class="single-testimonial">
-                            <div class="content-wrapper ">
-                                <div class="tip text-white">
-                                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
-                                    <div class="quote">
-                                        <i class="lni lni-quotation"></i>
-                                    </div>
+                        <div class="content-wrapper ">
+                            <div class="tip text-white">
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
+                                <div class="quote">
+                                    <i class="lni lni-quotation"></i>
                                 </div>
-                                <div class="info">
-                                    <div class="image">
-                                        <img src="<?= $assets; ?>images/testimonial-2.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h5>Christiano Viedo</h5>
-                                        <p>Experto Canina</p>
-                                    </div>
+                            </div>
+                            <div class="info">
+                                <div class="image">
+                                    <img src="<?= $assets; ?>images/testimonial-2.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h5>Christiano Viedo</h5>
+                                    <p>Experto Canina</p>
                                 </div>
                             </div>
                         </div>
@@ -518,22 +514,20 @@
             <div class="col-lg-6">
                 <div class="single_customer d-sm-flex align-items-center mt-30">
                     <div class="single-testimonial">
-                        <div class="single-testimonial">
-                            <div class="content-wrapper ">
-                                <div class="tip text-white">
-                                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
-                                    <div class="quote">
-                                        <i class="lni lni-quotation"></i>
-                                    </div>
+                        <div class="content-wrapper ">
+                            <div class="tip text-white">
+                                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo duis augue commodo neque auctor nisl, libero nunc, egestas. Pellentesque senectus.</p>
+                                <div class="quote">
+                                    <i class="lni lni-quotation"></i>
                                 </div>
-                                <div class="info">
-                                    <div class="image">
-                                        <img src="<?= $assets; ?>images/testimonial-3.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <h5>Mili Petric</h5>
-                                        <p>Estilista Canina</p>
-                                    </div>
+                            </div>
+                            <div class="info">
+                                <div class="image">
+                                    <img src="<?= $assets; ?>images/testimonial-3.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h5>Mili Petric</h5>
+                                    <p>Estilista Canina</p>
                                 </div>
                             </div>
                         </div>
