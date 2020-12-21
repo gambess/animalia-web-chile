@@ -520,11 +520,11 @@ p {
     /*padding: 0;*/ 
     padding: 15px 0; 
 }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .sticky .navbar {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .sticky .navbar {
         padding: 15px 0; } }
-    @media (max-width: 767px) {
-      .sticky .navbar {
+@media (max-width: 767px) {
+    .sticky .navbar {
         padding: 15px 0; } }
 
 .navbar {
@@ -547,8 +547,8 @@ p {
 
 .navbar-brand {
     font-family: 'HuntingStarRegular', sans-serif;
-/*    font-style: normal;
-    font-weight: normal;*/
+    /*    font-style: normal;
+        font-weight: normal;*/
     /*color: #178FD6 !important;*/
     margin-top: 14%;
     margin-bottom: -7%;
@@ -881,6 +881,117 @@ a.navbar-brand{
     background-color: #178FD6;
     border-color: #178FD6; }
 
+.hero-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    line-height: 70px;
+    letter-spacing: 0.1rem;
+}
+.hero-sub-heading {
+    font-size: 20px;
+    font-weight: 400;
+    color: #e6e6e6;
+    line-height: 45px;
+    letter-spacing: 0.1rem;
+}
+
+.hero-area-bg {
+    background: url(../images/mascotas.jpg) no-repeat;
+    background-size: cover;
+}
+#hero-area {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+#hero-area .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0c0808;
+    opacity: 0.6;
+}
+#hero-area .contents {
+    padding: 175px 0 120px;
+}
+#hero-area .contents h5 {
+    font-size: 50px;
+}
+#hero-area .contents .head-title {
+    color: #fff;
+    font-size: 80px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#hero-area .contents p {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+#hero-area .contents .btn {
+    margin: 25px 0;
+    text-transform: uppercase;
+}
+#hero-area .banner_bottom_btn {
+    margin-top: 40px;
+}
+#hero-area .banner_bottom_btn i {
+    color: #fff;
+    font-size: 48px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#hero-area .banner_bottom_btn i:hover {
+    color: #ddd;
+}
+
+
+
+
+@media(min-width:992px) and (max-width:1199px) {
+    #hero-area .contents .head-title {
+        font-size: 40px
+    }
+}
+
+@media(max-width:991px) {
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 30px
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    .section-title {
+        font-size: 26px;
+        margin-bottom: 30px
+    }
+}
+
+@media(max-width:767px) {
+    #hero-area .contents {
+        padding: 100px 0 60px
+    }
+    #hero-area .contents .head-title {
+        font-size: 22px
+    }
+    #hero-area .contents h5 {
+        font-size: 32px
+    }
+    #hero-area .contents p {
+        font-size: 20px
+    }
+}
+
 /*===========================
     03.COFFEE css 
 ===========================*/
@@ -1180,6 +1291,209 @@ a.navbar-brand{
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .single_coffee_menu .coffee_menu_content p {
         font-size: 16px; } }
+
+/*===========================
+     09,5.productos css 
+===========================*/
+.nav-link{
+    color: #178FD6 !important;
+}
+/*===========================
+08.BRAND css 
+===========================*/
+.brand-wrapper {
+    border-top: 1px solid #dedede; 
+}
+.brand-wrapper .single-brand {
+    float: left;
+    width: 20%;
+    text-align: center; 
+}
+@media (max-width: 767px) {
+    .brand-wrapper .single-brand {
+        width: 50%; 
+    } 
+}
+
+.tip {
+    position: relative;
+    background: #178FD6;
+    border-radius: 25px;
+    padding: 30px 25px;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+.tip::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 100px;
+    height: 54px;
+    bottom: -48px;
+    left: 18px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.login {
+    margin-bottom:5px;
+}
+.dropdown-menu {
+    width: 300px !important;
+}
+
+/*carousel styles*/
+.carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+.carousel .carousel-item {
+    min-height: 330px;
+    text-align: center;
+    overflow: hidden;
+}
+.carousel .carousel-item .img-box {
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+.carousel .carousel-item img {	
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.carousel .carousel-item h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.carousel .carousel-item .btn {
+    color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-top: 5px;
+    line-height: 16px;
+}
+.carousel .carousel-item .btn:hover, .carousel .carousel-item .btn:focus {
+    color: #fff;
+    background: #000;
+    border-color: #000;
+    box-shadow: none;
+}
+.carousel .carousel-item .btn i {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.carousel .thumb-wrapper {
+    text-align: center;
+}
+.carousel .thumb-content {
+    padding: 15px;
+}
+.carousel-control-prev, .carousel-control-next {
+    height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: #178FD6;
+}
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(23, 143, 214, 0.9);
+    text-shadow: none;
+    font-weight: bold;
+}
+.carousel-control-prev i {
+    margin-left: -3px;
+}
+.carousel-control-next i {
+    margin-right: -3px;
+}
+.carousel .item-price {
+    font-size: 13px;
+    padding: 2px 0;
+    font-weight: bold;
+}
+.carousel .item-price strike {
+    color: #999;
+    margin-right: 5px;
+}
+.carousel .item-price span {
+    color: #000;
+    font-size: 100%;
+    font-family: sans-serif;
+}	
+.carousel .carousel-indicators {
+    bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: none;
+}
+.carousel-indicators li {	
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+    background: rgba(0, 0, 0, 0.6);
+}
+.star-rating li {
+    padding: 0;
+}
+.star-rating i {
+    font-size: 14px;
+    color: #178FD6;
+}
+
+h6 > a {
+    text-decoration: none !important;
+    color: #000 !important;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+div > a.link {
+    text-decoration: none !important;
+    font-weight: bold;
+    /*color: #198754;//Verde*/
+    color: #E54E1B; /*//NAranja*/
+}
+
+/*end slider styles*/
+
+.custom-btn {
+    border-color: #178FD6 !important;
+}
+
+.fa-shopping-cart, .fa-cart-plus{
+    color: #178FD6;
+}
 
 /*===========================
      09.upcoming css 

@@ -157,7 +157,7 @@ class MY_Shop_Controller extends CI_Controller {
             }
 
             $data['isPromo'] = $this->shop_model->isPromo();
-            $data['side_featured'] = $this->shop_model->getFeaturedProducts(4, false);
+            $data['side_featured'] = $this->shop_model->getFeaturedProducts(16, false);
             $data['wishlist'] = $this->shop_model->getWishlist(TRUE);
             $data['info'] = $this->shop_model->getNotifications();
             $data['ip_address'] = $this->input->ip_address();
